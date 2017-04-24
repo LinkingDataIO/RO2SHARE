@@ -26,6 +26,6 @@ CSRF_SESSION_KEY = "secret"
 # Secret key for signing cookies
 SECRET_KEY = "secret"
 
-ORCID_CLIENT_ID = "APP-NNXW1QUFSJRHMC0C"
-ORCID_SECRET = "7353b09b-a689-456a-9f89-5561eaca9732"
+ORCID_CLIENT_ID = "YOUR CLIENT ID"
+ORCID_SECRET = "YOUR APP SECRET"
 ORCID_API_URL = "https://orcid.org/oauth/token"
