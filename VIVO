@@ -1,0 +1,7 @@
+The VIVO use case
+The VIVO dataset represents scholars within academic enviroments. Ithas been built over an ontology that represents profesors, researchers, outcomes, organization,
+etc. Several universities are part of the VIVO effort, this makes VIVO an authoritative data source because universities are mantaining 
+the information. Although VIVO is not heavy on ORCIDs, some VIVO records do have an ORCID. For our project, ORCID, identifiers in general,
+is an anchor that helps us to expand related triplets in our graph.
+User Story
+Data Workflow
