@@ -1,0 +1,8 @@
+Institutions
+These include, universities, research institutes, etc. 
+User story: the research manager at University X wants to retrive a list of publications with their associated datasets for a 
+given ORCID OR for a given name, e.g. Mike Conlon. 
+User story: the research manager at University X wants to retrieve all datasets known for a 
+given ORCID OR for a given name, e.g. Mike Conlon. 
+User story: the research manager at University X wants to retrieve the triad "paper-dataset-software" for a 
+given ORCID OR for a given name, e.g. Oscar Corcho. 
