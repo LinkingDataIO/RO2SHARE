@@ -1,2 +1,4 @@
 User story: the editor of a journal wants to ask the author for the triad "paper-software-dataset" 
+Note: this assumes the paper has a DOI, so it is after the paper has been reviewed and a DOI has been assigned. 
+It is also assumed that SHARE knows the dataset and the software for the author-ORCID. 
 User story: the editor of a journal wants to ask the author for any material related to the submited paper
