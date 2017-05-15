@@ -1,5 +1,5 @@
 # Import flask dependencies
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, json
 from flask_cors import CORS
 import urllib2
 import urllib
@@ -20,13 +20,28 @@ CORS(mod_auth)
 @mod_auth.route('/login/', methods=['GET', 'OPTIONS'])
 def signin():
     auth_code = request.args.get('orcid_auth_code')
-    params = {'client_id' : conf.ORCID_CLIENT_ID,
-              'client_secret' : conf.ORCID_SECRET,
+    params = {'client_id': conf.ORCID_CLIENT_ID,
+              'client_secret': conf.ORCID_SECRET,
               'grant_type': 'authorization_code',
-              'code' : auth_code,
-              'redirect_uri': 'http://localhost:4200/exchange'
+              'code': auth_code,
+              'redirect_uri': 'http://localhost:4200/login'
               }
     data = urllib.urlencode(params)
     req = urllib2.Request(conf.ORCID_API_URL, data)
     response = urllib2.urlopen(req)
-    return jsonify(response.read())
+    user_data = json.loads(response.read())
+    print user_data
+    if not user_exists(user_data['orcid']):
+        create_user(user_data['orcid'], user_data['name'], None, user_data['access_token'])
+    return jsonify(user_data)
+
+
+def user_exists(orcid):
+    user = User.query.filter_by(orcid=orcid).first()
+    return True if user else False
+
+
+def create_user(orcid, name, aka, token):
+    user = User(orcid=orcid, name=name, aka=aka, token=token)
+    db.session.add(user)
+    db.session.commit()

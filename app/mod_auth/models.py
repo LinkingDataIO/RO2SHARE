@@ -24,12 +24,14 @@ class User(Base):
     # Identification Data: email & password
     orcid = db.Column(db.String(128),  nullable=False, unique=True)
     token = db.Column(db.String(192),  nullable=False)
+    aka = db.Column(db.String(1000),  nullable=True)
 
-    def __init__(self, name, orcid, token):
+    def __init__(self, name, orcid, aka, token):
 
         self.name = name
         self.orcid = orcid
         self.token = token
+        self.aka = aka
 
     def __repr__(self):
         return '<User %r>' % self.name
