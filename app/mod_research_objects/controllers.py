@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify, json
 from flask_cors import CORS
 import urllib2
-from SPARQLWrapper import SPARQLWrapper, JSON
+from SPARQLWrapper import SPARQLWrapper, JSON, POST
 import urllib
 from docs import conf
 from app.mod_auth.models import User
@@ -20,25 +20,44 @@ def claim_ro():
     research_object = request.get_json()
     orcid = research_object['orcid']
     research_object = research_object['_source']
-    req = urllib2.Request('http://orcid.org/' + orcid)
-    req.add_header('Accept', 'text/turtle')
-    response = urllib2.urlopen(req)
-
-    load_turtle('/tmp/' + orcid + '.ttl', response.read())
+    if not person_exist(orcid):
+        req = urllib2.Request('http://orcid.org/' + orcid)
+        req.add_header('Accept', 'text/turtle')
+        response = urllib2.urlopen(req)
+        load_turtle('/tmp/' + orcid + '.ttl', response.read())
     load_turtle('/tmp/' + research_object['id'] + '.ttl', create_creative_work(research_object, orcid))
     return jsonify({'result': 'ok'})
 
 
+@mod_research_objects.route('/mine', methods=['GET'])
+def get_mine():
+    orcid = request.args.get('orcid')
+    sparql = SPARQLWrapper(conf.SPARQL_QUERY_ENDPOINT)
+    orcid = 'http://orcid.org/' + orcid
+    query = sparqlt.USER_ROS.format(orcid=orcid)
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    ros = []
+    for result in results['results']['bindings']:
+        ro = dict(uri=result['uri']['value'], title=result['title']['value'])
+        ros.append(ro)
+    return jsonify(ros)
+
+
 def load_turtle(file_path, turtle_str):
-    with open(file_path, 'a') as rdf_file:
+    with open(file_path, 'w') as rdf_file:
         rdf_file.write(turtle_str)
-        query = 'LOAD <file://' + file_path + '>'
-        sparql = SPARQLWrapper(conf.SPARQL_UPLOAD_ENDPOINT)
-        sparql.setQuery(query)
-        sparql.query()
+    query = 'LOAD <file://' + file_path + '>'
+    sparql = SPARQLWrapper(conf.SPARQL_UPLOAD_ENDPOINT)
+    sparql.setQuery(query)
+    sparql.setMethod(POST)
+    sparql.query()
 
 
 def create_creative_work(research_object, orcid):
+    user = User.query.filter_by(orcid=orcid).first()
+    user_name = user.name
     cw_turtle = rdft.PREFIXES
     work_uri = conf.BASE_URI + '/work/' + research_object['id']
 
@@ -68,24 +87,33 @@ def create_creative_work(research_object, orcid):
 
     for contributor in research_object['lists']['contributors']:
         contributor_uri = 'http://orcid.org/' + orcid
-        if not person_exist(orcid, contributor['name']):
+        print contributor['name']
+        if user_name not in contributor['name']:
             contributor_uri = conf.BASE_URI + 'contributors/' + contributor['id']
             cw_turtle += rdft.PERSON.format(contributor_uri=contributor_uri, name=contributor['name'])
         cw_turtle += rdft.CREATIVE_WORK_CREATOR.format(work_uri=work_uri, creator_uri=contributor_uri)
         for affiliation in contributor['affiliations']:
             affiliation_uri = conf.BASE_URI + 'affiliations/' + affiliation['id']
-            cw_turtle += rdft.AFFILIATION.format(affiliation_uri=affiliation_uri, name=affiliation['name'])
+            cw_turtle += rdft.AFFILIATION.format(affiliation_uri=affiliation_uri,
+                                                 name=affiliation['name'].encode('utf8'))
 
             person_uri_role = contributor_uri + '/roles/' + affiliation['id']
-            cw_turtle += rdft.PERSON_WORK_AFFILIATION(person_uri=contributor_uri, person_uri_role=person_uri_role,
+            cw_turtle += rdft.PERSON_WORK_AFFILIATION.format(person_uri=contributor_uri, person_uri_role=person_uri_role,
                                                       work_uri=work_uri, affiliation_uri=affiliation_uri)
+    for tag in research_object['tags']:
+        tag_rdf = rdft.CREATIVE_WORK_TAG.format(work_uri=work_uri, tag=tag)
+        cw_turtle += tag_rdf
     return cw_turtle
 
 
-def person_exist(orcid, name):
+def person_exist(orcid):
+    user = User.query.filter_by(orcid=orcid).first()
+    user_name = user.name
     sparql = SPARQLWrapper(conf.SPARQL_QUERY_ENDPOINT)
-    query = sparqlt.USER_EXIST_QUERY.format(orcid=orcid, name=name)
+    query = sparqlt.USER_EXIST_QUERY.format(orcid=orcid, name=user_name)
+    print query
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
     result = bool(sparql.query().convert()['boolean'])
+    print result
     return result

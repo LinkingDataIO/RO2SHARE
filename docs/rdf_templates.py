@@ -6,6 +6,7 @@ PREFIXES = """
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
 @prefix pro: <http://purl.org/spar/pro/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 """
 
 FABIO_TYPES = dict(article='Article', conference_paper='ConferencePaper')
@@ -50,21 +51,25 @@ PUBLISHER = """
 
 PERSON = """
 <{contributor_uri}> a foaf:Person .
-<{contributor_uri} foaf:name "{name}" .
+<{contributor_uri}> foaf:name "{name}" .
 """
 
 AFFILIATION = """
-<affiliation_uri> foaf:name "{name}" .
-<affiliation_uri> a foaf:Organization .
+<{affiliation_uri}> foaf:name "{name}" .
+<{affiliation_uri}> a foaf:Organization .
 """
 
 PERSON_WORK_AFFILIATION = """
-<person_uri> pro:holdsRoleInTime <person_uri_role> .
-<person_uri_role> a pro:RoleInTime ;
+<{person_uri}> pro:holdsRoleInTime <{person_uri_role}> .
+<{person_uri_role}> a pro:RoleInTime ;
     pro:withRole scoro:affiliate ;
     pro:relatesToDocument
-        <work_uri> ;
+        <{work_uri}> ;
     pro:relatesToOrganization
-        <affiliation_uri> .
+        <{affiliation_uri}> .
+"""
+
+CREATIVE_WORK_TAG = """
+<{work_uri}> dc:subject "{tag}" .
 """
 
