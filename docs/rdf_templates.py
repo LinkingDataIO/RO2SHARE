@@ -9,7 +9,7 @@ PREFIXES = """
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 """
 
-FABIO_TYPES = dict(article='Article', conference_paper='ConferencePaper')
+FABIO_TYPES = dict(article='Article', conference_paper='ConferencePaper', creative_work='Work', data_set='Dataset', default='Work')
 FOAF_TYPES = dict(person='Person', organization='Organization', institution='Organization')
 
 CREATIVE_WORK_TYPE = """

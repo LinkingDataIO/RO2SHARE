@@ -62,11 +62,11 @@ def create_creative_work(research_object, orcid):
     work_uri = conf.BASE_URI + '/work/' + research_object['id']
 
     work_type = research_object['type'].replace(' ', '_')
-    work_type = rdft.FABIO_TYPES[work_type]
+    work_type = rdft.FABIO_TYPES[work_type] if work_type in rdft.FABIO_TYPES else rdft.FABIO_TYPES['default']
     creative_work_type = rdft.CREATIVE_WORK_TYPE.format(work_uri=work_uri, type=work_type)
     cw_turtle += creative_work_type
 
-    work_title = research_object['title']
+    work_title = research_object['title'].encode('utf8')
     work_title = rdft.CREATIVE_WORK_TITLE.format(work_uri=work_uri, title=work_title)
     cw_turtle += work_title
 
@@ -88,9 +88,10 @@ def create_creative_work(research_object, orcid):
     for contributor in research_object['lists']['contributors']:
         contributor_uri = 'http://orcid.org/' + orcid
         print contributor['name']
-        if user_name not in contributor['name']:
+        if user_name.lower() not in contributor['name'].lower():
             contributor_uri = conf.BASE_URI + 'contributors/' + contributor['id']
-            cw_turtle += rdft.PERSON.format(contributor_uri=contributor_uri, name=contributor['name'])
+            contributor_name = contributor['name'].encode('utf8')
+            cw_turtle += rdft.PERSON.format(contributor_uri=contributor_uri, name=contributor_name)
         cw_turtle += rdft.CREATIVE_WORK_CREATOR.format(work_uri=work_uri, creator_uri=contributor_uri)
         for affiliation in contributor['affiliations']:
             affiliation_uri = conf.BASE_URI + 'affiliations/' + affiliation['id']
