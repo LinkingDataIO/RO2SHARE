@@ -41,6 +41,7 @@ def get_mine():
     results = sparql.query().convert()
     ros = []
     for result in results['results']['bindings']:
-        ro = dict(uri=result['uri']['value'], title=result['title']['value'], objects=result['objects']['value'])
-        ros.append(ro)
+        if 'uri' in result:
+            ro = dict(uri=result['uri']['value'], title=result['title']['value'], objects=result['objects']['value'])
+            ros.append(ro)
     return jsonify(ros)
