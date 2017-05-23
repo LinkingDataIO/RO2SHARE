@@ -11,5 +11,21 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?uri ?title {{
   ?uri dcterms:creator <{orcid}> .
   ?uri dcterms:title ?title .
+  ?uri a ?type .
+  FILTER(str(?type) != "http://rmap-project.org/rmap/terms/DiSCO")
 }}
+"""
+
+USER_DISCOS = """
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ore: <http://www.openarchives.org/ore/terms/>
+
+SELECT ?uri ?title (GROUP_CONCAT(?name;separator=" | ") as ?objects) {{
+  ?uri dcterms:creator <{orcid}> .
+  ?uri dc:description ?title .
+  ?uri a <http://rmap-project.org/rmap/terms/DiSCO> .
+  ?uri ore:aggregates ?object .
+  ?object dcterms:title ?name .
+}} GROUP BY ?uri ?title
 """

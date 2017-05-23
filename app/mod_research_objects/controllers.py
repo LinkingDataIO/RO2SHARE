@@ -8,6 +8,7 @@ from app.mod_auth.models import User
 from docs import rdf_templates as rdft
 from docs import sparql_templates as sparqlt
 import tempfile
+from app.utils.sparql_access import load_turtle
 
 from app import db
 
@@ -45,21 +46,14 @@ def get_mine():
     return jsonify(ros)
 
 
-def load_turtle(file_path, turtle_str):
-    with open(file_path, 'w') as rdf_file:
-        rdf_file.write(turtle_str)
-    query = 'LOAD <file://' + file_path + '>'
-    sparql = SPARQLWrapper(conf.SPARQL_UPLOAD_ENDPOINT)
-    sparql.setQuery(query)
-    sparql.setMethod(POST)
-    sparql.query()
-
-
 def create_creative_work(research_object, orcid):
     user = User.query.filter_by(orcid=orcid).first()
     user_name = user.name
     cw_turtle = rdft.PREFIXES
     work_uri = conf.BASE_URI + '/work/' + research_object['id']
+
+    share_url = 'https://share.osf.io/creativework/' + research_object['id']
+    cw_turtle += rdft.CREATIVE_WORK_SAME_AS.format(work_uri=work_uri, web_site=share_url)
 
     work_type = research_object['type'].replace(' ', '_')
     work_type = rdft.FABIO_TYPES[work_type] if work_type in rdft.FABIO_TYPES else rdft.FABIO_TYPES['default']
@@ -87,7 +81,6 @@ def create_creative_work(research_object, orcid):
 
     for contributor in research_object['lists']['contributors']:
         contributor_uri = 'http://orcid.org/' + orcid
-        print contributor['name']
         if user_name.lower() not in contributor['name'].lower():
             contributor_uri = conf.BASE_URI + 'contributors/' + contributor['id']
             contributor_name = contributor['name'].encode('utf8')
@@ -99,8 +92,10 @@ def create_creative_work(research_object, orcid):
                                                  name=affiliation['name'].encode('utf8'))
 
             person_uri_role = contributor_uri + '/roles/' + affiliation['id']
-            cw_turtle += rdft.PERSON_WORK_AFFILIATION.format(person_uri=contributor_uri, person_uri_role=person_uri_role,
-                                                      work_uri=work_uri, affiliation_uri=affiliation_uri)
+            cw_turtle += rdft.PERSON_WORK_AFFILIATION.format(person_uri=contributor_uri,
+                                                             person_uri_role=person_uri_role,
+                                                             work_uri=work_uri,
+                                                             affiliation_uri=affiliation_uri)
     for tag in research_object['tags']:
         tag_rdf = rdft.CREATIVE_WORK_TAG.format(work_uri=work_uri, tag=tag)
         cw_turtle += tag_rdf
@@ -112,9 +107,7 @@ def person_exist(orcid):
     user_name = user.name
     sparql = SPARQLWrapper(conf.SPARQL_QUERY_ENDPOINT)
     query = sparqlt.USER_EXIST_QUERY.format(orcid=orcid, name=user_name)
-    print query
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
     result = bool(sparql.query().convert()['boolean'])
-    print result
     return result

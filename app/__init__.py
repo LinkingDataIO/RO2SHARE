@@ -23,11 +23,13 @@ def not_found(error):
 from app.mod_auth.controllers import mod_auth as auth_module
 from app.mod_share_access.controllers import mod_share_access as share_access_module
 from app.mod_research_objects.controllers import mod_research_objects
+from app.mod_discos.controllers import mod_discos
 
 # Register blueprint(s)
 app.register_blueprint(auth_module)
 app.register_blueprint(share_access_module)
 app.register_blueprint(mod_research_objects)
+app.register_blueprint(mod_discos)
 
 # Build the database:
 # This will create the database file using SQLAlchemy

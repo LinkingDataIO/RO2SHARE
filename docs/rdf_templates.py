@@ -7,9 +7,11 @@ PREFIXES = """
 @prefix scoro: <http://purl.org/spar/scoro/> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
 """
 
-FABIO_TYPES = dict(article='Article', conference_paper='ConferencePaper', creative_work='Work', data_set='Dataset', default='Work')
+FABIO_TYPES = dict(article='Article', conference_paper='ConferencePaper',
+                   creative_work='Work', data_set='Dataset', default='Work')
 FOAF_TYPES = dict(person='Person', organization='Organization', institution='Organization')
 
 CREATIVE_WORK_TYPE = """
@@ -34,6 +36,10 @@ CREATIVE_WORK_DOI = """
 
 CREATIVE_WORK_SEE_ALSO = """
 <{work_uri}> owl:seeAlso <{web_site}> .
+"""
+
+CREATIVE_WORK_SAME_AS = """
+<{work_uri}> owl:sameAs <{web_site}> .
 """
 
 CREATIVE_WORK_DESCRIPTION = """
@@ -71,5 +77,15 @@ PERSON_WORK_AFFILIATION = """
 
 CREATIVE_WORK_TAG = """
 <{work_uri}> dc:subject "{tag}" .
+"""
+
+DISCO = """
+<{disco_uri}> a <http://rmap-project.org/rmap/terms/DiSCO> ;
+    dc:description "{disco_description}" ;
+    dcterms:creator <{person_uri}> .
+"""
+
+DISCO_RESOURCE = """
+<{disco_uri}> ore:aggregates <{ro_uri}> .
 """
 
