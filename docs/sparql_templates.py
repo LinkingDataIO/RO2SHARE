@@ -8,7 +8,7 @@ ASK {{ <http://orcid.org/{orcid}>  foaf:name|rdfs:label ?name .
 USER_ROS = """
 PREFIX dcterms: <http://purl.org/dc/terms/>
 
-SELECT ?uri ?title {{
+SELECT ?uri ?title ?type {{
   ?uri dcterms:creator <{orcid}> .
   ?uri dcterms:title ?title .
   ?uri a ?type .
@@ -28,4 +28,22 @@ SELECT ?uri ?title (GROUP_CONCAT(?name;separator=" | ") as ?objects) {{
   ?uri ore:aggregates ?object .
   ?object dcterms:title ?name .
 }} GROUP BY ?uri ?title
+"""
+
+RO_EXIST = """
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+ASK {{
+  ?s owl:sameAs <{share_url}> .
+  ?s dcterms:creator <{orcid}> .
+}}
+"""
+
+GET_ALL_URI = """
+SELECT DISTINCT ?property ?hasValue ?isValueOf
+WHERE {{
+  {{ <{uri}> ?property ?hasValue }}
+  UNION
+  {{ ?isValueOf ?property <{uri}> }}
+}}
 """

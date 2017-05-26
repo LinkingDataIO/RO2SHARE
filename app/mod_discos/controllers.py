@@ -1,17 +1,13 @@
-from flask import Blueprint, request, jsonify, json
+from flask import Blueprint, request, jsonify, current_app, send_from_directory
+import os
 from flask_cors import CORS
-import urllib2
-from SPARQLWrapper import SPARQLWrapper, JSON, POST
-import urllib
+from SPARQLWrapper import SPARQLWrapper, JSON
 from docs import conf
-from app.utils.sparql_access import load_turtle
-from app.mod_auth.models import User
+from app.utils.sparql_access import load_turtle, get_turtle_uri
 from docs import rdf_templates as rdft
 from docs import sparql_templates as sparqlt
-import tempfile
 import uuid
 
-from app import db
 
 mod_discos = Blueprint('discos', __name__, url_prefix='/disco')
 CORS(mod_discos)
@@ -26,7 +22,8 @@ def create_disco():
     disco_rdf += rdft.DISCO.format(disco_uri=disco_uri, disco_description=disco['description'], person_uri=orcid)
     for ro in disco['ros']:
         disco_rdf += rdft.DISCO_RESOURCE.format(disco_uri=disco_uri, ro_uri=ro)
-    load_turtle('/tmp/' + disco_uri.replace('/', '_') + '.ttl', disco_rdf)
+    file_path = os.path.join(current_app.root_path, conf.TMP_DIR) + disco_uri.replace('/', '_') + '.ttl'
+    load_turtle(file_path, disco_rdf)
     return jsonify(disco)
 
 
@@ -45,3 +42,14 @@ def get_mine():
             ro = dict(uri=result['uri']['value'], title=result['title']['value'], objects=result['objects']['value'])
             ros.append(ro)
     return jsonify(ros)
+
+
+@mod_discos.route('/download', methods=['GET'])
+def download_disco():
+    disco_uri = request.args.get('uri')
+    turtle_str = get_turtle_uri(disco_uri, True)
+    filepath = os.path.join(current_app.root_path, conf.TMP_DIR)
+    file_name = disco_uri.replace('/', '_') + 'DOWNLOAD.ttl'
+    with open(filepath + file_name, 'w') as rdf_file:
+        rdf_file.write(turtle_str)
+    return send_from_directory(directory=filepath, filename=file_name)

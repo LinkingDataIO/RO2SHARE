@@ -8,11 +8,17 @@ PREFIXES = """
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix ro2share: <http://ro2share.org/terms/> .
 """
 
 FABIO_TYPES = dict(article='Article', conference_paper='ConferencePaper',
-                   creative_work='Work', data_set='Dataset', default='Work')
+                   creative_work='Work', data_set='Dataset', repository='Repository', default='Work')
 FOAF_TYPES = dict(person='Person', organization='Organization', institution='Organization')
+
+TURTLE_TEMPLATES = dict(
+    hasValue="<{uri}> <{property}> {value} .\n",
+    isValueOf="<{subject}> <{property}> <{uri}> .\n"
+)
 
 CREATIVE_WORK_TYPE = """
 <{work_uri}> a fabio:{type} .
@@ -89,3 +95,6 @@ DISCO_RESOURCE = """
 <{disco_uri}> ore:aggregates <{ro_uri}> .
 """
 
+REPO_LANGUAGE = """
+<{repo_uri}> ro2share:language "{language}" .
+"""

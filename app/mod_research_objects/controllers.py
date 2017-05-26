@@ -1,16 +1,13 @@
-from flask import Blueprint, request, jsonify, json
+from flask import Blueprint, request, jsonify, current_app
+import os
 from flask_cors import CORS
 import urllib2
-from SPARQLWrapper import SPARQLWrapper, JSON, POST
-import urllib
+from SPARQLWrapper import SPARQLWrapper, JSON
 from docs import conf
 from app.mod_auth.models import User
 from docs import rdf_templates as rdft
 from docs import sparql_templates as sparqlt
-import tempfile
 from app.utils.sparql_access import load_turtle
-
-from app import db
 
 mod_research_objects = Blueprint('ro', __name__, url_prefix='/ro')
 CORS(mod_research_objects)
@@ -20,19 +17,25 @@ CORS(mod_research_objects)
 def claim_ro():
     research_object = request.get_json()
     orcid = research_object['orcid']
-    research_object = research_object['_source']
+
     if not person_exist(orcid):
         req = urllib2.Request('http://orcid.org/' + orcid)
         req.add_header('Accept', 'text/turtle')
         response = urllib2.urlopen(req)
-        load_turtle('/tmp/' + orcid + '.ttl', response.read())
-    load_turtle('/tmp/' + research_object['id'] + '.ttl', create_creative_work(research_object, orcid))
+        file_path = os.path.join(current_app.root_path, conf.TMP_DIR) + orcid + '.ttl'
+        load_turtle(file_path, response.read())
+    if research_object['type'] == 'work':
+        research_object = research_object['_source']
+        ro_ttl = create_creative_work(research_object, orcid)
+    if research_object['type'] == 'repo':
+        ro_ttl = create_repo(research_object, orcid)
+    file_path = os.path.join(current_app.root_path, conf.TMP_DIR) + str(research_object['id']) + '.ttl'
+    load_turtle(file_path, ro_ttl)
     return jsonify({'result': 'ok'})
 
 
-@mod_research_objects.route('/mine', methods=['GET'])
-def get_mine():
-    orcid = request.args.get('orcid')
+@mod_research_objects.route('/<orcid>/mine', methods=['GET'])
+def get_mine(orcid):
     sparql = SPARQLWrapper(conf.SPARQL_QUERY_ENDPOINT)
     orcid = 'http://orcid.org/' + orcid
     query = sparqlt.USER_ROS.format(orcid=orcid)
@@ -41,7 +44,8 @@ def get_mine():
     results = sparql.query().convert()
     ros = []
     for result in results['results']['bindings']:
-        ro = dict(uri=result['uri']['value'], title=result['title']['value'])
+        ro_type = result['type']['value'].replace('http://purl.org/spar/fabio/', '')
+        ro = dict(uri=result['uri']['value'], title=result['title']['value'], type=ro_type)
         ros.append(ro)
     return jsonify(ros)
 
@@ -50,7 +54,7 @@ def create_creative_work(research_object, orcid):
     user = User.query.filter_by(orcid=orcid).first()
     user_name = user.name
     cw_turtle = rdft.PREFIXES
-    work_uri = conf.BASE_URI + '/work/' + research_object['id']
+    work_uri = conf.BASE_URI + 'work/' + research_object['id']
 
     share_url = 'https://share.osf.io/creativework/' + research_object['id']
     cw_turtle += rdft.CREATIVE_WORK_SAME_AS.format(work_uri=work_uri, web_site=share_url)
@@ -100,6 +104,21 @@ def create_creative_work(research_object, orcid):
         tag_rdf = rdft.CREATIVE_WORK_TAG.format(work_uri=work_uri, tag=tag)
         cw_turtle += tag_rdf
     return cw_turtle
+
+
+def create_repo(repository, orcid):
+    repo_turtle = rdft.PREFIXES
+    creator_uri = 'http://orcid.org/' + orcid
+    repo_uri = conf.BASE_URI + 'repository/' + repository['name']
+
+    repo_turtle += rdft.CREATIVE_WORK_CREATOR.format(work_uri=repo_uri, creator_uri=creator_uri)
+    repo_turtle += rdft.CREATIVE_WORK_TYPE.format(work_uri=repo_uri, type=rdft.FABIO_TYPES['repository'])
+    repo_turtle += rdft.CREATIVE_WORK_TITLE.format(work_uri=repo_uri, title=repository['name'])
+    repo_turtle += rdft.CREATIVE_WORK_SAME_AS.format(work_uri=repo_uri, web_site=repository['html_url'])
+    repo_turtle += rdft.REPO_LANGUAGE.format(repo_uri=repo_uri, language=repository['language'])
+    repo_turtle += rdft.CREATIVE_WORK_DESCRIPTION.format(work_uri=repo_uri, description=repository['description'])
+
+    return repo_turtle
 
 
 def person_exist(orcid):
