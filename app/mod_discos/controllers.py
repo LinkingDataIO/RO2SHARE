@@ -27,6 +27,21 @@ def create_disco():
     return jsonify(disco)
 
 
+@mod_discos.route('/update', methods=['POST'])
+def update_disco():
+    disco = request.get_json()
+    orcid = 'http://orcid.org/' + disco['orcid']
+    disco_uri = disco['uri']
+    delete_disco(disco_uri)
+    disco_rdf = rdft.PREFIXES
+    disco_rdf += rdft.DISCO.format(disco_uri=disco_uri, disco_description=disco['description'], person_uri=orcid)
+    for ro in disco['ros']:
+        disco_rdf += rdft.DISCO_RESOURCE.format(disco_uri=disco_uri, ro_uri=ro)
+    file_path = os.path.join(current_app.root_path, conf.TMP_DIR) + disco_uri.replace('/', '_') + '.ttl'
+    load_turtle(file_path, disco_rdf)
+    return jsonify(disco)
+
+
 @mod_discos.route('/mine', methods=['GET'])
 def get_mine():
     orcid = request.args.get('orcid')
@@ -39,7 +54,10 @@ def get_mine():
     ros = []
     for result in results['results']['bindings']:
         if 'uri' in result:
-            ro = dict(uri=result['uri']['value'], title=result['title']['value'], objects=result['objects']['value'])
+            ro = dict(uri=result['uri']['value'],
+                      description=result['title']['value'],
+                      titles=result['titles']['value'],
+                      ros=result['objects']['value'].split('|'))
             ros.append(ro)
     return jsonify(ros)
 
@@ -53,3 +71,12 @@ def download_disco():
     with open(filepath + file_name, 'w') as rdf_file:
         rdf_file.write(turtle_str)
     return send_from_directory(directory=filepath, filename=file_name)
+
+
+def delete_disco(disco_uri):
+    query = sparqlt.DELETE_DISCO.format(disco_uri=disco_uri)
+    sparql = SPARQLWrapper(conf.SPARQL_UPLOAD_ENDPOINT)
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    print results

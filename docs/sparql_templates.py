@@ -21,7 +21,8 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX ore: <http://www.openarchives.org/ore/terms/>
 
-SELECT ?uri ?title (GROUP_CONCAT(?name;separator=" | ") as ?objects) {{
+SELECT ?uri ?title (GROUP_CONCAT(?name;separator=" | ") as ?titles) (GROUP_CONCAT(?object;separator="|") as ?objects)
+{{
   ?uri dcterms:creator <{orcid}> .
   ?uri dc:description ?title .
   ?uri a <http://rmap-project.org/rmap/terms/DiSCO> .
@@ -46,4 +47,8 @@ WHERE {{
   UNION
   {{ ?isValueOf ?property <{uri}> }}
 }}
+"""
+
+DELETE_DISCO = """
+DELETE {{ <{disco_uri}> ?p ?o  }} WHERE {{ <{disco_uri}> ?p ?o }}
 """

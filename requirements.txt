@@ -2,3 +2,6 @@ flask
 flask-sqlalchemy
 flask-cors
 sparqlwrapper
+bs4
+lxml
+unidecode

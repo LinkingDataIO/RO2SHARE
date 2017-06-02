@@ -8,6 +8,7 @@ from app.mod_auth.models import User
 from docs import rdf_templates as rdft
 from docs import sparql_templates as sparqlt
 from app.utils.sparql_access import load_turtle
+from unidecode import unidecode
 
 mod_research_objects = Blueprint('ro', __name__, url_prefix='/ro')
 CORS(mod_research_objects)
@@ -17,20 +18,7 @@ CORS(mod_research_objects)
 def claim_ro():
     research_object = request.get_json()
     orcid = research_object['orcid']
-
-    if not person_exist(orcid):
-        req = urllib2.Request('http://orcid.org/' + orcid)
-        req.add_header('Accept', 'text/turtle')
-        response = urllib2.urlopen(req)
-        file_path = os.path.join(current_app.root_path, conf.TMP_DIR) + orcid + '.ttl'
-        load_turtle(file_path, response.read())
-    if research_object['type'] == 'work':
-        research_object = research_object['_source']
-        ro_ttl = create_creative_work(research_object, orcid)
-    if research_object['type'] == 'repo':
-        ro_ttl = create_repo(research_object, orcid)
-    file_path = os.path.join(current_app.root_path, conf.TMP_DIR) + str(research_object['id']) + '.ttl'
-    load_turtle(file_path, ro_ttl)
+    claim(research_object, orcid)
     return jsonify({'result': 'ok'})
 
 
@@ -56,8 +44,11 @@ def create_creative_work(research_object, orcid):
     cw_turtle = rdft.PREFIXES
     work_uri = conf.BASE_URI + 'work/' + research_object['id']
 
-    share_url = 'https://share.osf.io/creativework/' + research_object['id']
-    cw_turtle += rdft.CREATIVE_WORK_SAME_AS.format(work_uri=work_uri, web_site=share_url)
+    if 'url' not in research_object:
+        share_url = 'https://share.osf.io/creativework/' + research_object['id']
+        cw_turtle += rdft.CREATIVE_WORK_SAME_AS.format(work_uri=work_uri, web_site=share_url)
+    else:
+        cw_turtle += rdft.CREATIVE_WORK_SAME_AS.format(work_uri=work_uri, web_site=research_object['url'])
 
     work_type = research_object['type'].replace(' ', '_')
     work_type = rdft.FABIO_TYPES[work_type] if work_type in rdft.FABIO_TYPES else rdft.FABIO_TYPES['default']
@@ -68,10 +59,18 @@ def create_creative_work(research_object, orcid):
     work_title = rdft.CREATIVE_WORK_TITLE.format(work_uri=work_uri, title=work_title)
     cw_turtle += work_title
 
+    if 'description' in research_object:
+        description = research_object['description'].encode('utf8').replace('\n', ' ').replace('"', "'")
+        work_description = rdft.CREATIVE_WORK_DESCRIPTION.format(work_uri=work_uri,
+                                                                 description=description)
+        cw_turtle += work_description
+
     for identifier in research_object['identifiers']:
         cw_turtle += rdft.CREATIVE_WORK_IDENTIFIER.format(work_uri=work_uri, identifier=identifier)
         if 'doi' in identifier:
             cw_turtle += rdft.CREATIVE_WORK_DOI.format(work_uri=work_uri, doi=identifier)
+        elif 'PMC' in identifier:
+            cw_turtle += rdft.CREATIVE_WORK_PMC.format(work_uri=work_uri, pmc=identifier)
         else:
             cw_turtle += rdft.CREATIVE_WORK_SEE_ALSO.format(work_uri=work_uri, web_site=identifier)
 
@@ -85,7 +84,9 @@ def create_creative_work(research_object, orcid):
 
     for contributor in research_object['lists']['contributors']:
         contributor_uri = 'http://orcid.org/' + orcid
-        if user_name.lower() not in contributor['name'].lower():
+        user_name = unidecode(user_name).lower()
+        contributor_name = unidecode(contributor['name']).lower()
+        if user_name not in contributor_name:
             contributor_uri = conf.BASE_URI + 'contributors/' + contributor['id']
             contributor_name = contributor['name'].encode('utf8')
             cw_turtle += rdft.PERSON.format(contributor_uri=contributor_uri, name=contributor_name)
@@ -101,6 +102,7 @@ def create_creative_work(research_object, orcid):
                                                              work_uri=work_uri,
                                                              affiliation_uri=affiliation_uri)
     for tag in research_object['tags']:
+        tag = tag.encode('utf8')
         tag_rdf = rdft.CREATIVE_WORK_TAG.format(work_uri=work_uri, tag=tag)
         cw_turtle += tag_rdf
     return cw_turtle
@@ -121,6 +123,26 @@ def create_repo(repository, orcid):
     return repo_turtle
 
 
+def create_presentation(presentation, orcid):
+    presentation_turtle = rdft.PREFIXES
+    creator_uri = 'http://orcid.org/' + orcid
+    presentation_uri = conf.BASE_URI + 'presentation/' + presentation['id']
+
+    presentation_turtle += rdft.CREATIVE_WORK_CREATOR.format(work_uri=presentation_uri, creator_uri=creator_uri)
+    presentation_turtle += rdft.CREATIVE_WORK_TYPE.format(work_uri=presentation_uri,
+                                                          type=rdft.FABIO_TYPES['presentation'])
+    presentation_turtle += rdft.CREATIVE_WORK_TITLE.format(work_uri=presentation_uri, title=presentation['title'])
+    presentation_turtle += rdft.CREATIVE_WORK_SAME_AS.format(work_uri=presentation_uri, web_site=presentation['url'])
+    presentation_turtle += rdft.PRESENTATION_LANGUAGE.format(presentation_uri=presentation_uri,
+                                                             language=presentation['language'])
+    presentation_turtle += rdft.PRESENTATION_FORMAT.format(presentation_uri=presentation_uri,
+                                                             format=presentation['format'])
+    presentation_turtle += rdft.CREATIVE_WORK_DESCRIPTION.format(work_uri=presentation_uri,
+                                                                 description=presentation['description'])
+
+    return presentation_turtle
+
+
 def person_exist(orcid):
     user = User.query.filter_by(orcid=orcid).first()
     user_name = user.name
@@ -130,3 +152,20 @@ def person_exist(orcid):
     sparql.setReturnFormat(JSON)
     result = bool(sparql.query().convert()['boolean'])
     return result
+
+
+def claim(research_object, orcid):
+    if not person_exist(orcid):
+        req = urllib2.Request('http://orcid.org/' + orcid)
+        req.add_header('Accept', 'text/turtle')
+        response = urllib2.urlopen(req)
+        file_path = os.path.join(current_app.root_path, conf.TMP_DIR) + orcid + '.ttl'
+        load_turtle(file_path, response.read())
+    if research_object['type'] == 'repo':
+        ro_ttl = create_repo(research_object, orcid)
+    elif research_object['type'] == 'presentation':
+        ro_ttl = create_presentation(research_object, orcid)
+    else:
+        ro_ttl = create_creative_work(research_object, orcid)
+    file_path = os.path.join(current_app.root_path, conf.TMP_DIR) + str(research_object['id']) + '.ttl'
+    load_turtle(file_path, ro_ttl)

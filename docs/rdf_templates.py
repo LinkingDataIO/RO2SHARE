@@ -12,7 +12,8 @@ PREFIXES = """
 """
 
 FABIO_TYPES = dict(article='Article', conference_paper='ConferencePaper',
-                   creative_work='Work', data_set='Dataset', repository='Repository', default='Work')
+                   creative_work='Work', data_set='Dataset',
+                   presentation='Presentation', repository='Repository', default='Work')
 FOAF_TYPES = dict(person='Person', organization='Organization', institution='Organization')
 
 TURTLE_TEMPLATES = dict(
@@ -38,6 +39,10 @@ CREATIVE_WORK_PUBLISHER = """
 
 CREATIVE_WORK_DOI = """
 <{work_uri}> bibo:doi "{doi}" .
+"""
+
+CREATIVE_WORK_PMC = """
+<{work_uri}> bibo:pmid "{pmc}" .
 """
 
 CREATIVE_WORK_SEE_ALSO = """
@@ -97,4 +102,12 @@ DISCO_RESOURCE = """
 
 REPO_LANGUAGE = """
 <{repo_uri}> ro2share:language "{language}" .
+"""
+
+PRESENTATION_LANGUAGE = """
+<{presentation_uri}> dcterms:language "{language}" .
+"""
+
+PRESENTATION_FORMAT = """
+<{presentation_uri}> dcterms:format "{format}" .
 """

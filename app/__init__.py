@@ -26,6 +26,8 @@ from app.mod_share_access.controllers import mod_share_access as share_access_mo
 from app.mod_research_objects.controllers import mod_research_objects
 from app.mod_discos.controllers import mod_discos
 from app.mod_github_access.controllers import mod_github
+from app.mod_slideshare_access.controllers import mod_slideshare
+from app.mod_openaire_access.controllers import mod_openaire
 
 # Register blueprint(s)
 app.register_blueprint(auth_module)
@@ -33,6 +35,8 @@ app.register_blueprint(share_access_module)
 app.register_blueprint(mod_research_objects)
 app.register_blueprint(mod_discos)
 app.register_blueprint(mod_github)
+app.register_blueprint(mod_slideshare)
+app.register_blueprint(mod_openaire)
 
 # Build the database:
 # This will create the database file using SQLAlchemy
