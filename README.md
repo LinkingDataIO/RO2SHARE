@@ -4,6 +4,11 @@ Digital assets are more valuable when they are part of a network rather than whe
 ## Installation
 ```bash
 git clone https://github.com/LinkingDataIO/RO2SHARE.git
+cd RO2SHARE
+virtualenv .env
+source .env/bin/activate
+pip install -r requirements.txt
+python run.py
 ```
 
 ## Use cases
