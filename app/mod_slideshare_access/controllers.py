@@ -25,6 +25,7 @@ def get_presentations():
     hash_slideshare = sha_1.hexdigest()
     slideshare_params = conf.SLIDESHARE_PARAMS.format(api_key=conf.SLIDESHARE_API_KEY,
                                                       ts=ts, hash=hash_slideshare, username=username)
+    print conf.SLIDESHARE_API_URL + slideshare_params
     req = urllib2.Request(conf.SLIDESHARE_API_URL + slideshare_params)
     response = urllib2.urlopen(req)
     presentations_soup = BeautifulSoup(response.read(), 'lxml-xml')

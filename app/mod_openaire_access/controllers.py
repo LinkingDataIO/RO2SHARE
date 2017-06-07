@@ -78,7 +78,7 @@ def parse_objects(openaaire_objects_xml, objects_type, orcid):
             contributor_name = contributor_xml.parent.find('fullname').string
             if contributor_name and contributor_name != '':
                 contributor_name = parse_name(contributor_name)
-                contributor = dict(affiliations=[], id=uuid.uuid4().hex, name=contributor_name)
+                contributor = dict(affiliations=[], id=uuid.uuid4().hex, name=contributor_name, identifiers=[])
                 openaire_object['lists']['contributors'].append(contributor)
         openaire_objects.append(openaire_object)
     return openaire_objects

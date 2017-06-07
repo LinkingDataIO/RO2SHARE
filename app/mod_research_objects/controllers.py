@@ -78,7 +78,7 @@ def create_creative_work(research_object, orcid):
         publisher_uri = conf.BASE_URI + 'publishers/' + publisher['id']
         publisher_type = publisher['type']
         publisher_type = rdft.FOAF_TYPES[publisher_type]
-        publisher_name = publisher['name']
+        publisher_name = publisher['name'].encode('utf8')
         cw_turtle += rdft.PUBLISHER.format(publisher_uri=publisher_uri, type=publisher_type, name=publisher_name)
         cw_turtle += rdft.CREATIVE_WORK_PUBLISHER.format(work_uri=work_uri, publisher_uri=publisher_uri)
 
@@ -86,11 +86,15 @@ def create_creative_work(research_object, orcid):
         contributor_uri = 'http://orcid.org/' + orcid
         user_name = unidecode(user_name).lower()
         contributor_name = unidecode(contributor['name']).lower()
-        if user_name not in contributor_name:
+        if orcid not in contributor['identifiers'] and user_name not in contributor_name:
             contributor_uri = conf.BASE_URI + 'contributors/' + contributor['id']
             contributor_name = contributor['name'].encode('utf8')
             cw_turtle += rdft.PERSON.format(contributor_uri=contributor_uri, name=contributor_name)
         cw_turtle += rdft.CREATIVE_WORK_CREATOR.format(work_uri=work_uri, creator_uri=contributor_uri)
+
+        if 'sameAsUri' in contributor:
+            cw_turtle += rdft.PERSON_SAME_AS.format(person_uri=contributor_uri, external_uri=contributor['sameAsUri'])
+
         for affiliation in contributor['affiliations']:
             affiliation_uri = conf.BASE_URI + 'affiliations/' + affiliation['id']
             cw_turtle += rdft.AFFILIATION.format(affiliation_uri=affiliation_uri,
@@ -119,6 +123,7 @@ def create_repo(repository, orcid):
     repo_turtle += rdft.CREATIVE_WORK_SAME_AS.format(work_uri=repo_uri, web_site=repository['html_url'])
     repo_turtle += rdft.REPO_LANGUAGE.format(repo_uri=repo_uri, language=repository['language'])
     repo_turtle += rdft.CREATIVE_WORK_DESCRIPTION.format(work_uri=repo_uri, description=repository['description'])
+    repo_turtle += rdft.PERSON_SAME_AS.format(person_uri=creator_uri, external_uri=repository['owner']['html_url'])
 
     return repo_turtle
 

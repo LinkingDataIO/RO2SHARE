@@ -86,6 +86,10 @@ PERSON_WORK_AFFILIATION = """
         <{affiliation_uri}> .
 """
 
+PERSON_SAME_AS = """
+<{person_uri}> owl:sameAs <{external_uri}> .
+"""
+
 CREATIVE_WORK_TAG = """
 <{work_uri}> dc:subject "{tag}" .
 """
