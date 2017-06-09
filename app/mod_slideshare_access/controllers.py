@@ -17,6 +17,7 @@ CORS(mod_slideshare)
 @mod_slideshare.route('/search', methods=['GET'])
 def get_presentations():
     username = request.args.get('username')
+    password = request.args.get('password')
     orcid = request.args.get('orcid')
     ts = str(math.ceil(time.time()))
     hash_slideshare = conf.SLIDESHARE_SECRET + ts
@@ -24,7 +25,9 @@ def get_presentations():
     sha_1.update(hash_slideshare)
     hash_slideshare = sha_1.hexdigest()
     slideshare_params = conf.SLIDESHARE_PARAMS.format(api_key=conf.SLIDESHARE_API_KEY,
-                                                      ts=ts, hash=hash_slideshare, username=username)
+                                                      ts=ts, hash=hash_slideshare,
+                                                      username=username,
+                                                      password=password)
     print conf.SLIDESHARE_API_URL + slideshare_params
     req = urllib2.Request(conf.SLIDESHARE_API_URL + slideshare_params)
     response = urllib2.urlopen(req)
