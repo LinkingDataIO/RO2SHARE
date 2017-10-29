@@ -26,6 +26,8 @@ python run.py
 ```
 
 ### Using the Dockerfile
+Replace the 'localhost' reference in the SPARQL\_QUERY\_ENDPOINT and SPARQL\_UPLOAD\_ENDPOINT values  in your docs/conf.py with the IP Address of your Docker Host corresponding to the Network Interface docker0.
+
 ```bash
 git clone https://github.com/LinkingDataIO/RO2SHARE.git
 cd RO2SHARE
@@ -48,7 +50,7 @@ npm start
 git clone https://github.com/LinkingDataIO/RO2SHARE-client.git
 cd RO2SHARE-client
 sudo docker build -t username:RO2SHARE-client .
-sudo docker run -p 4200:4200 username:RO2SHARE-client
+sudo docker run -p 4200:4200 -v /tmp:/tmp username:RO2SHARE-client
 ```
 
 ## Use cases
