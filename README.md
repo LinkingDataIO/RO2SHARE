@@ -12,7 +12,7 @@ You will need to have a SPARQL Endpoint (e.g. Fuseki Triple Store) up and runnin
 cd apache-jena-fuseki-3.4.0/
 ./fuseki-server
 ```
-
+The go to http://localhost:3030 and create a new dataset called 'ro2share'.
 ### Using Virtual Enviroment
 ```bash
 sudo apt-get update -y
