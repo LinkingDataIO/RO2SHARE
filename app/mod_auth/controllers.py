@@ -24,7 +24,7 @@ def signin():
               'client_secret': conf.ORCID_SECRET,
               'grant_type': 'authorization_code',
               'code': auth_code,
-              'redirect_uri': 'http://localhost:4200/login'
+              'redirect_uri': conf.ORCID_REDIRECT_URL
               }
     data = urllib.urlencode(params)
     req = urllib2.Request(conf.ORCID_API_URL, data)
