@@ -29,6 +29,7 @@ SECRET_KEY = "secret"
 ORCID_CLIENT_ID = ""
 ORCID_SECRET = ""
 ORCID_API_URL = "https://orcid.org/oauth/token"
+ORCID_REDIRECT_URL = "http://localhost:4200/login"
 
 GITHUB_CLIENT_ID = ""
 GITHUB_SECRET = ""
