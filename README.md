@@ -32,7 +32,7 @@ Replace the 'localhost' reference in the SPARQL\_QUERY\_ENDPOINT and SPARQL\_UPL
 git clone https://github.com/LinkingDataIO/RO2SHARE.git
 cd RO2SHARE
 sudo docker build -t username:RO2SHARE .
-sudo docker run -p 8080:8080 username:RO2SHARE
+sudo docker run -p 8080:8080 -v /tmp:/tmp username:RO2SHARE
 ```
 ## Client Installation
 The client is available at [LinkingDataIO/RO2SHARE-client](https://github.com/LinkingDataIO/RO2SHARE-client). Clone it and Include your ORCID APP Client ID in src/environments/enviroment.ts and src/environments/enviroment.prod.ts
