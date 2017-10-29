@@ -52,4 +52,4 @@ SPARQL_UPLOAD_ENDPOINT = "http://localhost:3030/ro2share/update"
 
 BASE_URI = 'http://ro2share.org/'
 
-TMP_DIR = 'tmp/'
+TMP_DIR = '/tmp/'
