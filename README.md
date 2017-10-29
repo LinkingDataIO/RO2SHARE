@@ -1,14 +1,54 @@
 # RO2SHARE
 Digital assets are more valuable when they are part of a network rather than when they live in isolation; this is true also for research related assets. RO2SHARE delivers a curatorial infrastructure for Research Digital Assets, A.K.A Research objects. We aim to i) facilitate the definition of "ownership" over these assets and ii) make it possible for researchers to establish relations across these assets. We are using semantic web technology, e.g. RDF, in order to expose the resulting datasets; we are using ontologies, e.g. DC, RO, in order to represent the RDAs and the relations amongst them. Ours is an incremental approach, initially the triplets are related to the RDAs, "ownership" is then added to the graph; depending on the type of RDA, e.g. paper, software, figure, dataset, we are adding related triplets from external sources, e.g. Biotea (RDF for PMC), Colil (citations in context) and DBPEDIA. The resulting data from the brief interaction between the end user and the digital assets being managed over our interface is open and it is exposed over our SPARQL endpoint. This project delivers data infrastructure, the GUI is just for demostration purposes; the UX will be part of our future work. We are using SHARE data because it aggregates several sources; we are using the ORCID API as our authoritative ID provider and validator. Our work reuses datamodels and concepts from the Open Archives Initiative Object Reuse and Exchange and the rmap-project. 
 
-## Installation
+## Web service Installation
+Before installing make sure that you have included a conf.py file in the docs/ path. There is an example under docs/conf_template.py. You can copy and edit that file in order to install your local RO2SHARE.
+### Requirements
+You will need to have a SPARQL Endpoint (e.g. Fuseki Triple Store) up and running in order to run this web service.
+
+- Download Apache Fuseki from the [Apache Downloads Web site](https://jena.apache.org/download/#jena-fuseki)
+- Uncompress it
 ```bash
+cd apache-jena-fuseki-3.4.0/
+./fuseki-server
+```
+
+### Using Virtual Enviroment
+```bash
+sudo apt-get update -y
+sudo apt-get install -y python-pip python-dev build-essential libxml2-dev libxslt1-dev zlib1g-dev
 git clone https://github.com/LinkingDataIO/RO2SHARE.git
 cd RO2SHARE
 virtualenv .env
 source .env/bin/activate
 pip install -r requirements.txt
 python run.py
+```
+
+### Using the Dockerfile
+```bash
+git clone https://github.com/LinkingDataIO/RO2SHARE.git
+cd RO2SHARE
+sudo docker build -t username:RO2SHARE .
+sudo docker run -p 8080:8080 username:RO2SHARE
+```
+## Client Installation
+The client is available at [LinkingDataIO/RO2SHARE-client](https://github.com/LinkingDataIO/RO2SHARE-client). Clone it and Include your ORCID APP Client ID in src/environments/enviroment.ts and src/environments/enviroment.prod.ts
+
+### Using NPM
+```bash
+git clone https://github.com/LinkingDataIO/RO2SHARE-client.git
+cd RO2SHARE-client
+npm install
+npm start
+```
+
+### Using Dockerfile
+```bash
+git clone https://github.com/LinkingDataIO/RO2SHARE-client.git
+cd RO2SHARE-client
+sudo docker build -t username:RO2SHARE-client .
+sudo docker run -p 4200:4200 username:RO2SHARE-client
 ```
 
 ## Use cases
