@@ -56,8 +56,7 @@ sudo docker run -p 4200:4200 -v /tmp:/tmp username:RO2SHARE-client
 ## Use cases
 ### Expanding the graph on PMC papers
 Our is an incremental approach that makes use of linked data in order to expand the graph of triplets that are related to a 
-Research Digital Asset. Depenidng on the type of RDA, we use different sources. This example ilustrates the use of the Biotea dataset;
-this is a 
+Research Digital Asset (RDA). Depenidng on the type of RDA, we use different sources. For instastance, the Biotea dataset () could easily be enhanced by adding the triplets asserting the relations between the DOI, a git file and a dataset in figshare. Moreover, as Biotea profiles the concepts in the papers by using semantic annotations, the graph could illustrate the aboutness of the tool as well. 
 
 ### VIVO
 The VIVO dataset represents scholars within academic enviroments. It has been built over an ontology that represents profesors, researchers, outcomes, organization,
@@ -65,25 +64,20 @@ publications, etc. Several universities are part of the VIVO effort, this makes 
 the information. Although VIVO is not heavy on ORCIDs, some VIVO records do have an ORCID. For our project, ORCID, identifiers in general,
 is an anchor that helps us to expand related triplets in our graph.
 User Story: as a researcher I want to bring my publications from my VIVO profile
-Data Workflow
-User Story: as a researcher I want to bring some specific items from my VIVO profile, e.g. vivo:overview
-Data Workflow
+The dataworkflow could beguing by retrieving data from a VIVO instance; this could be done via a SPARQL query. Then, the retrieved publication could be "claimed" and then the graph could be expanded by adding assertions indicating the relation between the claimed object and, for instance, a poster in Figshare. 
+
 
 ### Institutions
 These include, universities, research institutes, etc. 
 User story: the research manager at University X wants to retrive a list of publications with their associated datasets for a 
-given ORCID OR for a given name, e.g. Mike Conlon. 
-User story: the research manager at University X wants to retrieve all datasets known for a 
-given ORCID OR for a given name, e.g. Mike Conlon. 
-User story: the research manager at University X wants to retrieve the triad "paper-dataset-software" for a 
+given ORCID OR for a given name, e.g. Mike Conlon.  
+User story: the research manager at University X wants to retrieve the triplets for "paper-dataset-software" for a 
 given ORCID OR for a given name, e.g. Oscar Corcho. 
 
 ### Publishers
-User story: the editor of a journal wants to ask the author for the triad "paper-software-dataset" 
-Note: this assumes the paper has a DOI, so it is after the paper has been reviewed and a DOI has been assigned. 
-It is also assumed that SHARE knows the dataset and the software for the author-ORCID. 
-User story: the editor of a journal wants to ask the author for any material related to the submited paper
+User story: the editor of a journal wants to ask the author for the triplets "paper-software-dataset" 
+The triplets can easily be created using this tool/approach. 
 
 ### Researchers
-User story: as a researcher I want to retrieve a list of all my triads "paper-software-dataset" 
-User story: as a researcher I want to retrive incomplete triads, e.g. "papers with dataset and no software" 
+User story: as a researcher I want to retrieve a list of all my triplets "paper-software-dataset" 
+User story: as a researcher I want to retrive  triplets, e.g. "papers with dataset and no software" 
