@@ -1,0 +1,2625 @@
+@prefix ore:   <http://www.openarchives.org/ore/terms/> .
+@prefix pav:   <http://purl.org/pav/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix gn:    <http://www.geonames.org/ontology#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pro:   <http://purl.org/spar/pro/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bibo:  <http://purl.org/ontology/bibo/> .
+@prefix ro2share: <http://ro2share.org/terms/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix scoro: <http://purl.org/spar/scoro/> .
+
+<http://orcid.org/0000-0002-7138-3542#workspace-works>
+        a       foaf:Document .
+
+<http://sws.geonames.org/2635167/>
+        rdfs:label      "United Kingdom of Great Britain and Northern Ireland" , "United Kingdom" ;
+        gn:countryCode  "GB" ;
+        gn:name         "United Kingdom of Great Britain and Northern Ireland" , "United Kingdom" .
+
+<http://orcid.org/0000-0002-7138-3542#orcid-id>
+        a                            foaf:OnlineAccount ;
+        rdfs:label                   "0000-0002-7138-3542" ;
+        foaf:accountName             "0000-0002-7138-3542" ;
+        foaf:accountServiceHomepage  <http://orcid.org> .
+
+<http://pub.orcid.org/orcid-pub-web/experimental_rdf_v1/0000-0002-7138-3542>
+        a                     foaf:PersonalProfileDocument ;
+        pav:createdBy         <http://orcid.org/0000-0002-7138-3542> ;
+        pav:createdOn         "2017-01-10T09:19:02.638Z"^^xsd:dateTime ;
+        pav:createdWith       <http://orcid.org> ;
+        pav:lastUpdateOn      "2017-06-16T15:32:21.266Z"^^xsd:dateTime ;
+        prov:generatedAtTime  "2017-06-16T15:32:21.266Z"^^xsd:dateTime ;
+        prov:wasAttributedTo  <http://orcid.org/0000-0002-7138-3542> ;
+        foaf:maker            <http://orcid.org/0000-0002-7138-3542> ;
+        foaf:primaryTopic     <http://orcid.org/0000-0002-7138-3542> .
+
+<http://orcid.org/0000-0002-7138-3542>
+        a                  foaf:Person , prov:Person ;
+        rdfs:label         "Federico Lopez" ;
+        owl:sameAs         <https://github.com/ficolo> , <https://share.osf.io/person/640ED-47D-B36> , <http://api.openaire.eu/search/publications?openaireAuthorID=413fe0c9fc554bb988b6d0751db476d3> , <http://api.openaire.eu/search/publications?openaireAuthorID=848c3a61f64447d3b951ceb8fe530e81> , <https://share.osf.io/person/64159-2C7-8E9> , <https://share.osf.io/person/6402E-8F8-77B> , <https://share.osf.io/person/6407D-176-6E1> ;
+        foaf:account       <http://orcid.org/0000-0002-7138-3542#orcid-id> ;
+        foaf:based_near    [ a                 gn:Feature ;
+                             gn:countryCode    "GB" ;
+                             gn:parentCountry  <http://sws.geonames.org/2635167/>
+                           ] ;
+        foaf:familyName    "López Gómez" ;
+        foaf:givenName     "Federico" ;
+        foaf:name          "Federico Lopez" ;
+        foaf:publications  <http://orcid.org/0000-0002-7138-3542#workspace-works> .
+
+<http://ro2share.org/repository/bioschemas-validator-cli>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "None" ;
+        dcterms:title        "bioschemas-validator-cli" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/ficolo/bioschemas-validator-cli> .
+
+<http://ro2share.org/work/46001-AB1-FA1>
+        a                    fabio:Work ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> , <http://ro2share.org/contributors/640DF-DC7-226> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <http://dx.doi.org/10.3390/JOF2010011> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64038-79D-43F> ;
+        dcterms:title        "Omics for Investigating Chitosan as an Antifungal and Gene Modulator" ;
+        bibo:doi             "http://dx.doi.org/10.3390/JOF2010011" ;
+        owl:sameAs           <https://share.osf.io/creativework/46001-AB1-FA1> .
+
+<http://ro2share.org/contributors/640DF-DC7-226>
+        a           foaf:Person ;
+        owl:sameAs  <https://share.osf.io/person/640DF-DC7-226> ;
+        foaf:name   "Luis Lopez-Llorca" .
+
+<http://ro2share.org/publishers/64038-79D-43F>
+        a          foaf:Organization ;
+        foaf:name  "MDPI AG" .
+
+<http://ro2share.org/work/doajarticles::95a6df76b845cf4bee196e48deda0e9b>
+        a                    fabio:Work ;
+        dc:subject           "B1-5802" , "Philosophy (General)" ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "Crelier, Andrés. De los argumentos trascendentales a la hermenéutica trascendental. La Plata, EDULP. 2010, 373 pp." ;
+        dcterms:publisher    <http://ro2share.org/publishers/087d91511ae840b6be67d8e9d078e06b> ;
+        dcterms:title        "Crelier, Andrés. De los argumentos trascendentales a la hermenéutica trascendental. La Plata, EDULP. 2010, 373 pp." ;
+        owl:sameAs           <http://www.rfytp.fahce.unlp.edu.ar/article/view/1853> .
+
+<http://ro2share.org/publishers/087d91511ae840b6be67d8e9d078e06b>
+        a          foaf:Organization ;
+        foaf:name  "Universidad Nacional de La Plata" .
+
+<http://ro2share.org/discos/659f4e5af22346b19461b95785109117>
+        a                <http://rmap-project.org/rmap/terms/DiSCO> ;
+        dc:description   "Biotea" ;
+        dcterms:creator  <http://orcid.org/0000-0002-7138-3542> ;
+        ore:aggregates   <http://ro2share.org/work/46001-AB1-FA1> , <http://ro2share.org/repository/biotea-annotation> , <http://ro2share.org/repository/biotea-ao> , <http://ro2share.org/presentation/75176072> , <http://ro2share.org/presentation/31231560> .
+
+<http://ro2share.org/repository/biotea-annotation>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "RDF annotation for PubMed and PMC using entity recognition tools such as NCBO Annotator and CMA." ;
+        dcterms:title        "biotea-annotation" ;
+        ro2share:language    "Java" ;
+        owl:sameAs           <https://github.com/ficolo/biotea-annotation> .
+
+<http://ro2share.org/repository/biotea-ao>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "A java representation for the Annotation Ontology" ;
+        dcterms:title        "biotea-ao" ;
+        ro2share:language    "Java" ;
+        owl:sameAs           <https://github.com/ficolo/biotea-ao> .
+
+<http://ro2share.org/presentation/75176072>
+        a                    fabio:Presentation ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "With the explosion of biological data in the postgenomic era, there has been a growing need for semantic data integration, supported by ontologies. Semantic integration techniques enable biologists to construct complex biological queries. However, the construction of these queries and analysis of their results can place a high cognitive load on biologists. This paper presents a proposed information visualisation tool, Digr, to aid biologists in these processes within the context of DigraBase, a graph database for semantic data integration. A working example of a query is presented, to illustrate the complexity of the information spaces under consideration. Visualisation techniques that have been applied to similar problems are discussed in the context of their applicability to the problem of aiding the construction of complex queries over DigraBase, and the interpretation of their results. " ;
+        dcterms:format       "pdf" ;
+        dcterms:language     "en" ;
+        dcterms:title        "Knowledge Driven User Interfaces for Complex Biological Queries" ;
+        owl:sameAs           <https://www.slideshare.net/alexgarciac/knowledge-driven-user-interfaces-for-complex-biological-queries> .
+
+<http://ro2share.org/presentation/31231653>
+        a                    fabio:Presentation ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "We need to start understanding documents within an electronic machine procesable environment. Such conception goes beyond the PDF and HTML; it entails, I argue, understanding the document as a fluid aggregator. " ;
+        dcterms:format       "pptx" ;
+        dcterms:language     "en" ;
+        dcterms:title        "Paper as a Research Object" ;
+        owl:sameAs           <https://www.slideshare.net/alexgarciac/paper-as-a-research-object> .
+
+<http://ro2share.org/presentation/31231560>
+        a                    fabio:Presentation ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "Biotea: RDFizing PubMed Central in support for the paper as an interface to the Web of Data http://www.jbiomedsem.com/content/4/S1/S5" ;
+        dcterms:format       "pptx" ;
+        dcterms:language     "en" ;
+        dcterms:title        "Biotea poster biolinks at ISMB 2013" ;
+        owl:sameAs           <https://www.slideshare.net/alexgarciac/biotea-poster-biolinks-at-ismb-2013> .
+
+<http://ro2share.org/publishers/84852bcd8eaa41148e263fea3035ce8e>
+        a          foaf:Organization ;
+        foaf:name  "Instituto de Investigación Textil y Cooperación Industrial" .
+
+<http://ro2share.org/work/od______3484::06b73b979f390a6e9415cea8b39dd4e5>
+        a                    fabio:Work ;
+        dc:subject           "Indústria tèxtil" , "Textile industry" , ":Enginyeria tèxtil ::Indústria tèxtil [Àrees temàtiques de la UPC]" ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "Despedida del Profesor Federico López-Amo Marín como editor de la publicación. \t\t\tPeer Reviewed" ;
+        dcterms:publisher    <http://ro2share.org/publishers/84852bcd8eaa41148e263fea3035ce8e> ;
+        dcterms:title        "Despedida" ;
+        owl:sameAs           <http://hdl.handle.net/2099/6316> .
+
+<http://ro2share.org/publishers/64029-9E6-DA2>
+        a          foaf:Organization ;
+        foaf:name  "University of Chicago Press" .
+
+<http://ro2share.org/work/46044-610-012>
+        a                    fabio:Work ;
+        dc:subject           "medicine(all)" ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> , <http://ro2share.org/contributors/640C2-7C1-2C7> , <http://ro2share.org/contributors/641EF-DCD-F0B> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <http://dx.doi.org/10.1086/691405> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64029-9E6-DA2> ;
+        dcterms:title        "Convergent Reversion to Single Mating in a Wasp Social Parasite" ;
+        bibo:doi             "http://dx.doi.org/10.1086/691405" ;
+        owl:sameAs           <https://share.osf.io/creativework/46044-610-012> .
+
+<http://ro2share.org/contributors/640C2-7C1-2C7>
+        a           foaf:Person ;
+        owl:sameAs  <https://share.osf.io/person/640C2-7C1-2C7> ;
+        foaf:name   "Libor Dvořák" .
+
+<http://ro2share.org/contributors/641EF-DCD-F0B>
+        a           foaf:Person ;
+        owl:sameAs  <https://share.osf.io/person/641EF-DCD-F0B> ;
+        foaf:name   "Kevin J. Loope" .
+
+<http://ro2share.org/repository/biotea-generation-support-scripts>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "None" ;
+        dcterms:title        "biotea-generation-support-scripts" ;
+        ro2share:language    "HTML" ;
+        owl:sameAs           <https://github.com/ficolo/biotea-generation-support-scripts> .
+
+<http://ro2share.org/repository/biotea-utilities>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "A common place to store packages and configuration common to other Biotea repositories" ;
+        dcterms:title        "biotea-utilities" ;
+        ro2share:language    "Java" ;
+        owl:sameAs           <https://github.com/ficolo/biotea-utilities> .
+
+<http://orcid.org/0000-0003-4727-9435>
+        a                    foaf:Person , prov:Person ;
+        rdfs:label           "Michel Dumontier" ;
+        pro:holdsRoleInTime  <http://orcid.org/0000-0003-4727-9435/roles/640CD-C1E-3F6> , <http://orcid.org/0000-0003-4727-9435/roles/6417D-623-7E6> , <http://orcid.org/0000-0003-4727-9435/roles/6408B-4F2-488> ;
+        owl:sameAs           <http://api.openaire.eu/search/publications?openaireAuthorID=40de35ce9eab4997b9c0d6542931cf1a> ;
+        foaf:account         <http://orcid.org/0000-0003-4727-9435#orcid-id> ;
+        foaf:familyName      "Dumontier" ;
+        foaf:givenName       "Michel" ;
+        foaf:name            "Michel Dumontier" ;
+        foaf:page            <https://cris.maastrichtuniversity.nl/portal/en/persons/michel-dumontier(986f49c5-eb81-4b63-b27f-2c08fab7d9d9).html> , <http://dumontierlab.com> , <http://maastrichtuniversity.nl/ids> ;
+        foaf:plan            "Dr. Michel Dumontier is a Distinguished Professor of Data Science at Maastricht University. His research focuses on the development of computational methods for scalable integration and reproducible analysis of FAIR (Findable, Accessible, Interoperable and Reusable) data across scales - from molecules, tissues, organs, individuals, populations to the environment. His group combines semantic web technologies with effective indexing, machine learning and network analysis for drug discovery and personalized medicine. \n\nPreviously at Stanford University, Dr. Dumontier now leads a new inter-faculty Institute for Data Science at Maastricht University with a focus on accelerating discovery science, improving health and well being, and strengthening communities. He is a Principal Investigator for the NCATS Biomedical Data Translator and a co-Investigator for the NIH BD2K Center for Expanded Data Annotation and Retrieval (CEDAR). He is a member of the Dutch TechCenter for Life Sciences, and participates in Elixir, a EU wide initiative to develop a distributed infrastructure for life-science information. He is the editor-in-chief for the IOS press journal Data Science and an associate editor for the IOS press journal Semantic Web. He is a technical lead for the FAIR (Findable, Accessible, Interoperable, Re-usable) data initiative, and is the scientific director for Bio2RDF, an open source project to generate Linked Data for the Life Sciences. He has published over 125 articles in top rated journals and international conferences. He is internationally recognized for his contributions in bioinformatics, biomedical informatics, and semantic technologies as evidenced by awards, keynote talks at international conferences, and collaborations on international projects." ;
+        foaf:publications    <http://orcid.org/0000-0003-4727-9435#workspace-works> .
+
+<http://orcid.org/0000-0003-4727-9435#workspace-works>
+        a       foaf:Document .
+
+<http://orcid.org/0000-0003-4727-9435#orcid-id>
+        a                            foaf:OnlineAccount ;
+        rdfs:label                   "0000-0003-4727-9435" ;
+        foaf:accountName             "0000-0003-4727-9435" ;
+        foaf:accountServiceHomepage  <http://orcid.org> .
+
+<http://pub.orcid.org/orcid-pub-web/experimental_rdf_v1/0000-0003-4727-9435>
+        a                     foaf:PersonalProfileDocument ;
+        pav:createdBy         <http://orcid.org/0000-0003-4727-9435> ;
+        pav:createdOn         "2012-10-22T16:39:11.646Z"^^xsd:dateTime ;
+        pav:createdWith       <http://orcid.org> ;
+        pav:lastUpdateOn      "2017-06-19T13:21:38.034Z"^^xsd:dateTime ;
+        prov:generatedAtTime  "2017-06-19T13:21:38.034Z"^^xsd:dateTime ;
+        prov:wasAttributedTo  <http://orcid.org/0000-0003-4727-9435> ;
+        foaf:maker            <http://orcid.org/0000-0003-4727-9435> ;
+        foaf:primaryTopic     <http://orcid.org/0000-0003-4727-9435> .
+
+<http://ro2share.org/contributors/641ED-B74-72A/roles/6410F-098-83B>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46213-F09-84D> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/6410F-098-83B> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/6410F-098-83B>
+        a          foaf:Organization ;
+        foaf:name  "Center for Biotechnology & Interdisciplinary Studies, Rensselaer Polytechnic Institute, Troy" .
+
+<http://ro2share.org/work/46213-F09-84D>
+        a                    fabio:Article ;
+        dc:subject           "drug repositioning" , "uncertainty reasoning" , "world wide web and web science" , "computational biology" , "bioinformatics" , "melanoma" , "data science" , "knowledge graphs" ;
+        dcterms:creator      <http://orcid.org/0000-0003-4727-9435> , <http://ro2share.org/contributors/641FB-22B-03A> , <http://ro2share.org/contributors/641ED-B74-72A> , <http://ro2share.org/contributors/6407F-0ED-6A1> , <http://ro2share.org/contributors/6423C-6A5-47F> , <http://ro2share.org/contributors/64030-5BC-94C> ;
+        dcterms:description  "Metastatic cutaneous melanoma is an aggressive skin cancer with some progression-slowing treatments but no known cure. The omics data explosion has created many possible drug candidates; however, filtering criteria remain challenging, and systems biology approaches have become fragmented with many disconnected databases. Using drug, protein and disease interactions, we built an evidence-weighted knowledge graph of integrated interactions. Our knowledge graph-based system, ReDrugS, can be used via an application programming interface or web interface, and has generated 25 high-quality melanoma drug candidates. We show that probabilistic analysis of systems biology graphs increases drug candidate quality compared to non-probabilistic methods. Four of the 25 candidates are novel therapies, three of which have been tested with other cancers. All other candidates have current or completed clinical trials, or have been studied in in vivo or in vitro. This approach can be used to identify candidate therapies for use in research or personalized medicine." ;
+        dcterms:identifier   <urn://share/com.peerj:cs-106> , <http://peerj.com/articles/cs-106.xml> , <http://peerj.com/articles/cs-106.html> , <http://peerj.com/articles/cs-106.pdf> , <http://dx.doi.org/10.7717/PEERJ-CS.106> , <http://peerj.com/articles/cs-106> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64148-FDE-797> , <http://ro2share.org/publishers/6414D-26F-77B> ;
+        dcterms:title        "Finding melanoma drugs through a probabilistic knowledge graph" ;
+        bibo:doi             "http://dx.doi.org/10.7717/PEERJ-CS.106" ;
+        owl:sameAs           <https://share.osf.io/creativework/46213-F09-84D> ;
+        owl:seeAlso          <urn://share/com.peerj:cs-106> , <http://peerj.com/articles/cs-106.xml> , <http://peerj.com/articles/cs-106.html> , <http://peerj.com/articles/cs-106.pdf> , <http://peerj.com/articles/cs-106> .
+
+<http://ro2share.org/contributors/641FB-22B-03A>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/641FB-22B-03A/roles/64164-724-A18> ;
+        foaf:name            "James P. Mccusker" .
+
+<http://ro2share.org/contributors/641FB-22B-03A/roles/64164-724-A18>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46213-F09-84D> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64164-724-A18> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/640C7-0C2-F6E>
+        a          foaf:Organization ;
+        foaf:name  "Department of Chemical & Biological Engineering, Rensselaer Polytechnic Institute, Troy" .
+
+<http://ro2share.org/publishers/64148-FDE-797>
+        a          foaf:Organization ;
+        foaf:name  "PeerJ Inc." .
+
+<http://ro2share.org/contributors/641ED-B74-72A>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/641ED-B74-72A/roles/6410F-098-83B> , <http://ro2share.org/contributors/641ED-B74-72A/roles/64164-724-A18> ;
+        foaf:name            "Deborah L. Mcguinness" .
+
+<http://ro2share.org/contributors/641ED-B74-72A/roles/64164-724-A18>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46213-F09-84D> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64164-724-A18> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/6407F-0ED-6A1>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/6407F-0ED-6A1/roles/64164-724-A18> ;
+        foaf:name            "Rui Yan" .
+
+<http://ro2share.org/contributors/6407F-0ED-6A1/roles/64164-724-A18>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46213-F09-84D> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64164-724-A18> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/64164-724-A18>
+        a          foaf:Organization ;
+        foaf:name  "Department of Computer Science, Rensselaer Polytechnic Institute, Troy" .
+
+<http://ro2share.org/affiliations/640CD-C1E-3F6>
+        a          foaf:Organization ;
+        foaf:name  "Stanford Center for Biomedical Informatics Research, Stanford University School of Medicine, Stanford" .
+
+<http://ro2share.org/contributors/64030-5BC-94C/roles/6410F-098-83B>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46213-F09-84D> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/6410F-098-83B> ;
+        pro:withRole               scoro:affiliate .
+
+<http://orcid.org/0000-0003-4727-9435/roles/640CD-C1E-3F6>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46213-F09-84D> , <http://ro2share.org/work/461B7-59D-E21> , <http://ro2share.org/work/4615B-FFE-A78> , <http://ro2share.org/work/4603C-0A8-744> , <http://ro2share.org/work/46032-C2D-548> , <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/640CD-C1E-3F6> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/6423C-6A5-47F/roles/64164-724-A18>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46213-F09-84D> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64164-724-A18> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/publishers/6414D-26F-77B>
+        a          foaf:Organization ;
+        foaf:name  "PeerJ" .
+
+<http://ro2share.org/contributors/6423C-6A5-47F>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/6423C-6A5-47F/roles/64164-724-A18> ;
+        foaf:name            "Sylvia He" .
+
+<http://ro2share.org/contributors/64030-5BC-94C>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/64030-5BC-94C/roles/6410F-098-83B> , <http://ro2share.org/contributors/64030-5BC-94C/roles/640C7-0C2-F6E> ;
+        foaf:name            "Jonathan S. Dordick" .
+
+<http://ro2share.org/contributors/64030-5BC-94C/roles/640C7-0C2-F6E>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46213-F09-84D> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/640C7-0C2-F6E> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/6414E-FD2-CEE>
+        a          foaf:Person ;
+        foaf:name  "Alex Bui" .
+
+<http://ro2share.org/contributors/64196-FA8-5BB>
+        a          foaf:Person ;
+        foaf:name  "Ravi Madduri" .
+
+<http://ro2share.org/contributors/64028-521-532>
+        a          foaf:Person ;
+        foaf:name  "Benedict Paten" .
+
+<http://ro2share.org/contributors/640CC-6DE-464>
+        a          foaf:Person ;
+        foaf:name  "Kathleen M. Jagodnik" .
+
+<http://ro2share.org/contributors/641E5-AD9-310>
+        a          foaf:Person ;
+        foaf:name  "Stephan C. Schurer" .
+
+<http://ro2share.org/contributors/6407D-BAD-70F>
+        a          foaf:Person ;
+        foaf:name  "Simon Koplev" .
+
+<http://ro2share.org/affiliations/6417D-623-7E6>
+        a          foaf:Organization ;
+        foaf:name  "Stanford Center for Biomedical Informatics Research" .
+
+<http://orcid.org/0000-0003-4727-9435/roles/6417D-623-7E6>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/461B7-59D-E21> , <http://ro2share.org/work/4615B-FFE-A78> , <http://ro2share.org/work/4603C-0A8-744> , <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/6417D-623-7E6> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/work/461B7-59D-E21>
+        a                    fabio:Article ;
+        dc:subject           "computer science applications" , "health informatics" ;
+        dcterms:creator      <http://orcid.org/0000-0003-4727-9435> , <http://ro2share.org/contributors/6414E-FD2-CEE> , <http://ro2share.org/contributors/64196-FA8-5BB> , <http://ro2share.org/contributors/64028-521-532> , <http://ro2share.org/contributors/640CC-6DE-464> , <http://ro2share.org/contributors/641E5-AD9-310> , <http://ro2share.org/contributors/6407D-BAD-70F> , <http://ro2share.org/contributors/64100-4A1-F99> , <http://ro2share.org/contributors/6422D-AAE-BDD> , <http://ro2share.org/contributors/64010-83D-BE7> , <http://ro2share.org/contributors/6402F-07C-9BA> , <http://ro2share.org/contributors/640B8-4CC-6CC> , <http://ro2share.org/contributors/64070-4F6-DFF> , <http://ro2share.org/contributors/64234-60A-065> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <http://api.elsevier.com/content/article/PII:S1532046417301016?httpAccept=text/xml> , <http://api.elsevier.com/content/article/PII:S1532046417301016?httpAccept=text/plain> , <http://dx.doi.org/10.1016/J.JBI.2017.05.006> ;
+        dcterms:publisher    <http://ro2share.org/publishers/641A0-D36-735> ;
+        dcterms:title        "Developing a framework for digital objects in the Big Data to Knowledge (BD2K) commons: Report from the Commons Framework Pilots workshop" ;
+        bibo:doi             "http://dx.doi.org/10.1016/J.JBI.2017.05.006" ;
+        owl:sameAs           <https://share.osf.io/creativework/461B7-59D-E21> ;
+        owl:seeAlso          <http://api.elsevier.com/content/article/PII:S1532046417301016?httpAccept=text/xml> , <http://api.elsevier.com/content/article/PII:S1532046417301016?httpAccept=text/plain> .
+
+<http://ro2share.org/publishers/641A0-D36-735>
+        a          foaf:Organization ;
+        foaf:name  "Elsevier BV" .
+
+<http://ro2share.org/contributors/64100-4A1-F99>
+        a          foaf:Person ;
+        foaf:name  "Ajay Pillai" .
+
+<http://ro2share.org/contributors/6422D-AAE-BDD>
+        a          foaf:Person ;
+        foaf:name  "Peipei Ping" .
+
+<http://orcid.org/0000-0003-4727-9435/roles/6408B-4F2-488>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/461B7-59D-E21> , <http://ro2share.org/work/4615B-FFE-A78> , <http://ro2share.org/work/4603C-0A8-744> , <http://ro2share.org/work/46032-C2D-548> , <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/6408B-4F2-488> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/6408B-4F2-488>
+        a          foaf:Organization ;
+        foaf:name  "Stanford Center for Biomedical Informatics Research, Stanford University" .
+
+<http://ro2share.org/contributors/64010-83D-BE7>
+        a          foaf:Person ;
+        foaf:name  "Avi Ma'Ayan" .
+
+<http://ro2share.org/contributors/6402F-07C-9BA>
+        a          foaf:Person ;
+        foaf:name  "Sherry L. Jenkins" .
+
+<http://ro2share.org/contributors/640B8-4CC-6CC>
+        a          foaf:Person ;
+        foaf:name  "Neil J. Mckenna" .
+
+<http://ro2share.org/contributors/64070-4F6-DFF>
+        a          foaf:Person ;
+        foaf:name  "Ruben Verborgh" .
+
+<http://ro2share.org/contributors/64234-60A-065>
+        a          foaf:Person ;
+        foaf:name  "Lucila Ohno-Machado" .
+
+<http://ro2share.org/contributors/6415B-1DE-865>
+        a          foaf:Person ;
+        foaf:name  "Leigh Carmody" .
+
+<http://ro2share.org/contributors/641B7-3C5-ECA>
+        a          foaf:Person ;
+        foaf:name  "Peter Robinson" .
+
+<http://ro2share.org/contributors/640BD-B7C-DBB>
+        a          foaf:Person ;
+        foaf:name  "Lara Mangravite" .
+
+<http://ro2share.org/contributors/64089-DB9-286>
+        a          foaf:Person ;
+        foaf:name  "Mark Lawler" .
+
+<http://ro2share.org/contributors/641FF-05F-6EB/roles/64236-6B5-90F>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4615B-FFE-A78> , <http://ro2share.org/work/4603C-0A8-744> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64236-6B5-90F> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/64236-6B5-90F>
+        a          foaf:Organization ;
+        foaf:name  "Library, Oregon Health & Science University" .
+
+<http://ro2share.org/work/4615B-FFE-A78>
+        a                    fabio:Work ;
+        dc:subject           "bioinformatics" ;
+        dcterms:creator      <http://orcid.org/0000-0003-4727-9435> , <http://ro2share.org/contributors/6415B-1DE-865> , <http://ro2share.org/contributors/641B7-3C5-ECA> , <http://ro2share.org/contributors/640BD-B7C-DBB> , <http://ro2share.org/contributors/64089-DB9-286> , <http://ro2share.org/contributors/641B0-86A-A42> , <http://ro2share.org/contributors/6403B-288-531> , <http://ro2share.org/contributors/6405C-B50-BD9> , <http://ro2share.org/contributors/64090-940-B88> , <http://ro2share.org/contributors/64083-25D-DFE> , <http://ro2share.org/contributors/640D8-8E9-FDB> , <http://ro2share.org/contributors/64034-72D-0A9> , <http://ro2share.org/contributors/64154-683-3DD> , <http://ro2share.org/contributors/64113-208-F98> , <http://ro2share.org/contributors/64041-DE3-9B9> , <http://ro2share.org/contributors/6402D-BD1-C21> , <http://ro2share.org/contributors/64119-D64-420> , <http://ro2share.org/contributors/64241-821-70B> , <http://ro2share.org/contributors/64120-8BF-8A8> , <http://ro2share.org/contributors/6414D-B27-F55> , <http://ro2share.org/contributors/640CB-233-6CB> , <http://ro2share.org/contributors/641FF-39B-797> , <http://ro2share.org/contributors/64027-076-799> , <http://ro2share.org/contributors/641F8-840-30F> , <http://ro2share.org/contributors/641A9-D0F-5BA> , <http://ro2share.org/contributors/64075-BA7-4EE> , <http://ro2share.org/contributors/641FF-05F-6EB> , <http://ro2share.org/contributors/64161-D39-CED> , <http://ro2share.org/contributors/6410C-6AD-B10> , <http://ro2share.org/contributors/641F1-CE4-E87> , <http://ro2share.org/contributors/64105-B52-688> , <http://ro2share.org/contributors/641E4-62E-577> , <http://ro2share.org/contributors/640D1-D8E-B53> , <http://ro2share.org/contributors/64233-15F-2CC> , <http://ro2share.org/contributors/64240-815-BDC> , <http://ro2share.org/contributors/6407C-702-976> , <http://ro2share.org/contributors/64247-371-064> , <http://ro2share.org/contributors/640C4-6D8-243> , <http://ro2share.org/contributors/6419C-658-CAA> , <http://ro2share.org/contributors/6420C-A52-0A7> , <http://ro2share.org/contributors/6406F-04C-066> , <http://ro2share.org/contributors/641EB-189-9FF> , <http://ro2share.org/contributors/6424D-ECC-4EC> , <http://ro2share.org/contributors/64168-895-175> , <http://ro2share.org/contributors/64239-CBA-754> , <http://ro2share.org/contributors/641A3-1B4-132> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <oai://oai.datacite.org/10942416> , <http://dx.doi.org/10.6084/M9.FIGSHARE.4972709> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Request for Community partnership in data resource licensing planning" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.4972709" ;
+        owl:sameAs           <https://share.osf.io/creativework/4615B-FFE-A78> ;
+        owl:seeAlso          <oai://oai.datacite.org/10942416> .
+
+<http://ro2share.org/contributors/641B0-86A-A42>
+        a          foaf:Person ;
+        foaf:name  "Lawrence Hunter" .
+
+<http://ro2share.org/contributors/6403B-288-531>
+        a          foaf:Person ;
+        foaf:name  "Ida Sim" .
+
+<http://ro2share.org/contributors/6405C-B50-BD9>
+        a          foaf:Person ;
+        foaf:name  "Kristi Holmes" .
+
+<http://ro2share.org/contributors/64090-940-B88>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/64090-940-B88/roles/6418A-1E7-D42> ;
+        foaf:name            "Melissa Haendel" .
+
+<http://ro2share.org/contributors/64090-940-B88/roles/6418A-1E7-D42>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4615B-FFE-A78> , <http://ro2share.org/work/4603C-0A8-744> , <http://ro2share.org/work/46032-C2D-548> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/6418A-1E7-D42> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/publishers/64001-3AA-928>
+        a          foaf:Organization ;
+        foaf:name  "Figshare" .
+
+<http://ro2share.org/contributors/64083-25D-DFE>
+        a          foaf:Person ;
+        foaf:name  "Damian Smedley" .
+
+<http://ro2share.org/affiliations/64141-143-001>
+        a          foaf:Organization ;
+        foaf:name  "OHSU Library, Oregon Health & Science University" .
+
+<http://ro2share.org/contributors/640D8-8E9-FDB>
+        a          foaf:Person ;
+        foaf:name  "Andrew Su" .
+
+<http://ro2share.org/contributors/64034-72D-0A9>
+        a          foaf:Person ;
+        foaf:name  "Mark Diekans" .
+
+<http://ro2share.org/contributors/64154-683-3DD>
+        a          foaf:Person ;
+        foaf:name  "Matthew H. Brush" .
+
+<http://ro2share.org/contributors/64113-208-F98>
+        a          foaf:Person ;
+        foaf:name  "Adrienne Zell" .
+
+<http://ro2share.org/contributors/64041-DE3-9B9>
+        a          foaf:Person ;
+        foaf:name  "Chris Chute" .
+
+<http://ro2share.org/contributors/6402D-BD1-C21>
+        a          foaf:Person ;
+        foaf:name  "Jeremy Goecks" .
+
+<http://ro2share.org/contributors/64119-D64-420>
+        a          foaf:Person ;
+        foaf:name  "Sean Mcdonald" .
+
+<http://ro2share.org/contributors/64241-821-70B>
+        a          foaf:Person ;
+        foaf:name  "Nicole Vasilevsky" .
+
+<http://ro2share.org/contributors/64120-8BF-8A8>
+        a          foaf:Person ;
+        foaf:name  "Russ B Altman" .
+
+<http://ro2share.org/contributors/6414D-B27-F55>
+        a          foaf:Person ;
+        foaf:name  "Julie Mcmurry" .
+
+<http://ro2share.org/contributors/640CB-233-6CB>
+        a          foaf:Person ;
+        foaf:name  "Timothy Clark" .
+
+<http://ro2share.org/contributors/641FF-39B-797>
+        a          foaf:Person ;
+        foaf:name  "Philip R.O. Payne" .
+
+<http://ro2share.org/contributors/64027-076-799>
+        a          foaf:Person ;
+        foaf:name  "Mark D Wilkinson" .
+
+<http://ro2share.org/contributors/641F8-840-30F>
+        a          foaf:Person ;
+        foaf:name  "Sean Mooney" .
+
+<http://ro2share.org/contributors/641A9-D0F-5BA>
+        a          foaf:Person ;
+        foaf:name  "Carole Goble" .
+
+<http://ro2share.org/contributors/64075-BA7-4EE>
+        a          foaf:Person ;
+        foaf:name  "Jean-Philippe Gourdine" .
+
+<http://ro2share.org/contributors/641FF-05F-6EB>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/641FF-05F-6EB/roles/64236-6B5-90F> , <http://ro2share.org/contributors/641FF-05F-6EB/roles/64141-143-001> ;
+        foaf:name            "Robin Champieux" .
+
+<http://ro2share.org/contributors/641FF-05F-6EB/roles/64141-143-001>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4615B-FFE-A78> , <http://ro2share.org/work/4603C-0A8-744> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64141-143-001> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/64161-D39-CED>
+        a          foaf:Person ;
+        foaf:name  "Emma Ganley" .
+
+<http://ro2share.org/contributors/6410C-6AD-B10>
+        a          foaf:Person ;
+        foaf:name  "Victor Jongeneel" .
+
+<http://ro2share.org/contributors/641F1-CE4-E87>
+        a          foaf:Person ;
+        foaf:name  "Casey Overby" .
+
+<http://ro2share.org/contributors/64105-B52-688>
+        a          foaf:Person ;
+        foaf:name  "Raja Mazumder" .
+
+<http://ro2share.org/contributors/641E4-62E-577>
+        a          foaf:Person ;
+        foaf:name  "Nicholas P. Tatonetti" .
+
+<http://ro2share.org/contributors/640D1-D8E-B53>
+        a          foaf:Person ;
+        foaf:name  "Subha Srinivasan" .
+
+<http://ro2share.org/contributors/64233-15F-2CC>
+        a          foaf:Person ;
+        foaf:name  "Richard L. Zhu" .
+
+<http://ro2share.org/contributors/64240-815-BDC>
+        a          foaf:Person ;
+        foaf:name  "Amye Kenall" .
+
+<http://ro2share.org/contributors/6407C-702-976>
+        a          foaf:Person ;
+        foaf:name  "Gustavo Glusman" .
+
+<http://ro2share.org/contributors/64247-371-064>
+        a          foaf:Person ;
+        foaf:name  "John Willbanks" .
+
+<http://ro2share.org/contributors/640C4-6D8-243>
+        a          foaf:Person ;
+        foaf:name  "Monica Munos-Torres" .
+
+<http://ro2share.org/contributors/6419C-658-CAA>
+        a          foaf:Person ;
+        foaf:name  "Brett Tyler" .
+
+<http://ro2share.org/contributors/6420C-A52-0A7>
+        a          foaf:Person ;
+        foaf:name  "Michael R. Crusoe" .
+
+<http://ro2share.org/contributors/6406F-04C-066>
+        a          foaf:Person ;
+        foaf:name  "Peter D'Eustachio" .
+
+<http://ro2share.org/contributors/641EB-189-9FF>
+        a          foaf:Person ;
+        foaf:name  "Joshua Bittker" .
+
+<http://ro2share.org/contributors/6424D-ECC-4EC>
+        a          foaf:Person ;
+        foaf:name  "Chris Mungall" .
+
+<http://ro2share.org/contributors/64168-895-175>
+        a          foaf:Person ;
+        foaf:name  "Tudor I. Oprea" .
+
+<http://ro2share.org/contributors/64239-CBA-754>
+        a          foaf:Person ;
+        foaf:name  "Guoqian Jiang" .
+
+<http://ro2share.org/contributors/641A3-1B4-132>
+        a          foaf:Person ;
+        foaf:name  "Maureen Hoatlin" .
+
+<http://ro2share.org/affiliations/6418A-1E7-D42>
+        a          foaf:Organization ;
+        foaf:name  "OHSU" .
+
+<http://ro2share.org/contributors/640A4-B26-4A6>
+        a          foaf:Person ;
+        foaf:name  "Casey Overby" .
+
+<http://ro2share.org/contributors/6401B-6D6-794>
+        a          foaf:Person ;
+        foaf:name  "Lawrence Hunter" .
+
+<http://ro2share.org/contributors/640EC-AFB-D73>
+        a          foaf:Person ;
+        foaf:name  "Guoqian Jiang" .
+
+<http://ro2share.org/contributors/64220-C63-E3F>
+        a          foaf:Person ;
+        foaf:name  "Emma Ganley" .
+
+<http://ro2share.org/contributors/6412D-F76-1B8>
+        a          foaf:Person ;
+        foaf:name  "Mark D Wilkinson" .
+
+<http://ro2share.org/work/4603C-0A8-744>
+        a                    fabio:Work ;
+        dc:subject           "bioinformatics" ;
+        dcterms:creator      <http://orcid.org/0000-0003-4727-9435> , <http://ro2share.org/contributors/6405C-B50-BD9> , <http://ro2share.org/contributors/64090-940-B88> , <http://ro2share.org/contributors/64241-821-70B> , <http://ro2share.org/contributors/641FF-05F-6EB> , <http://ro2share.org/contributors/6420C-A52-0A7> , <http://ro2share.org/contributors/640A4-B26-4A6> , <http://ro2share.org/contributors/6401B-6D6-794> , <http://ro2share.org/contributors/640EC-AFB-D73> , <http://ro2share.org/contributors/64220-C63-E3F> , <http://ro2share.org/contributors/6412D-F76-1B8> , <http://ro2share.org/contributors/6417C-AA6-F0D> , <http://ro2share.org/contributors/640FA-1B2-683> , <http://ro2share.org/contributors/641CB-5D7-C62> , <http://ro2share.org/contributors/64142-187-F50> , <http://ro2share.org/contributors/64022-231-C1C> , <http://ro2share.org/contributors/64197-814-12D> , <http://ro2share.org/contributors/641C4-A7C-7DA> , <http://ro2share.org/contributors/64227-7BF-2C7> , <http://ro2share.org/contributors/6409D-FCB-01E> , <http://ro2share.org/contributors/64175-F4B-A85> , <http://ro2share.org/contributors/6400E-01F-E84> , <http://ro2share.org/contributors/6413B-62C-AC8> , <http://ro2share.org/contributors/64190-CB8-CA5> , <http://ro2share.org/contributors/6421A-108-9B7> , <http://ro2share.org/contributors/64134-AD1-640> , <http://ro2share.org/contributors/641DF-7E9-9FA> , <http://ro2share.org/contributors/6406A-207-4E9> , <http://ro2share.org/contributors/64183-602-395> , <http://ro2share.org/contributors/6404F-49A-2C9> , <http://ro2share.org/contributors/64055-FF5-751> , <http://ro2share.org/contributors/64063-6AC-061> , <http://ro2share.org/contributors/640B2-1DC-DB6> , <http://ro2share.org/contributors/640B8-D38-23E> , <http://ro2share.org/contributors/64097-46F-B96> , <http://ro2share.org/contributors/641D8-C8E-572> , <http://ro2share.org/contributors/64100-D0D-B0B> , <http://ro2share.org/contributors/6418A-15D-81D> , <http://ro2share.org/contributors/64014-B7B-30C> , <http://ro2share.org/contributors/64007-4C4-9FC> , <http://ro2share.org/contributors/64148-CE3-3D8> , <http://ro2share.org/contributors/640DF-445-463> , <http://ro2share.org/contributors/640E5-FA0-8EB> , <http://ro2share.org/contributors/64000-969-574> , <http://ro2share.org/contributors/64213-5AD-52F> , <http://ro2share.org/contributors/640AB-681-92E> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <oai://oai.datacite.org/10942417> , <http://dx.doi.org/10.6084/M9.FIGSHARE.4972709.V1> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Request for Community partnership in data resource licensing planning" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.4972709.V1" ;
+        owl:sameAs           <https://share.osf.io/creativework/4603C-0A8-744> ;
+        owl:seeAlso          <oai://oai.datacite.org/10942417> .
+
+<http://ro2share.org/contributors/6417C-AA6-F0D>
+        a          foaf:Person ;
+        foaf:name  "Jean-Philippe Gourdine" .
+
+<http://ro2share.org/contributors/640FA-1B2-683>
+        a          foaf:Person ;
+        foaf:name  "Ida Sim" .
+
+<http://ro2share.org/contributors/641CB-5D7-C62>
+        a          foaf:Person ;
+        foaf:name  "Monica Munos-Torres" .
+
+<http://ro2share.org/contributors/64142-187-F50>
+        a          foaf:Person ;
+        foaf:name  "Damian Smedley" .
+
+<http://ro2share.org/contributors/64022-231-C1C>
+        a          foaf:Person ;
+        foaf:name  "Peter Robinson" .
+
+<http://ro2share.org/contributors/64197-814-12D>
+        a          foaf:Person ;
+        foaf:name  "Andrew Su" .
+
+<http://ro2share.org/contributors/641C4-A7C-7DA>
+        a          foaf:Person ;
+        foaf:name  "Lara Mangravite" .
+
+<http://ro2share.org/contributors/64227-7BF-2C7>
+        a          foaf:Person ;
+        foaf:name  "Tudor I. Oprea" .
+
+<http://ro2share.org/contributors/6409D-FCB-01E>
+        a          foaf:Person ;
+        foaf:name  "Joshua Bittker" .
+
+<http://ro2share.org/contributors/64175-F4B-A85>
+        a          foaf:Person ;
+        foaf:name  "Nicholas P. Tatonetti" .
+
+<http://ro2share.org/contributors/6400E-01F-E84>
+        a          foaf:Person ;
+        foaf:name  "Leigh Carmody" .
+
+<http://ro2share.org/contributors/6413B-62C-AC8>
+        a          foaf:Person ;
+        foaf:name  "Mark Diekans" .
+
+<http://ro2share.org/contributors/64190-CB8-CA5>
+        a          foaf:Person ;
+        foaf:name  "Subha Srinivasan" .
+
+<http://ro2share.org/contributors/6421A-108-9B7>
+        a          foaf:Person ;
+        foaf:name  "Adrienne Zell" .
+
+<http://ro2share.org/contributors/64134-AD1-640>
+        a          foaf:Person ;
+        foaf:name  "Jeremy Goecks" .
+
+<http://ro2share.org/contributors/641DF-7E9-9FA>
+        a          foaf:Person ;
+        foaf:name  "Russ B Altman" .
+
+<http://ro2share.org/contributors/6406A-207-4E9>
+        a          foaf:Person ;
+        foaf:name  "Philip R.O. Payne" .
+
+<http://ro2share.org/contributors/64183-602-395>
+        a          foaf:Person ;
+        foaf:name  "Gustavo Glusman" .
+
+<http://ro2share.org/contributors/6404F-49A-2C9>
+        a          foaf:Person ;
+        foaf:name  "Brett Tyler" .
+
+<http://ro2share.org/contributors/64055-FF5-751>
+        a          foaf:Person ;
+        foaf:name  "Maureen Hoatlin" .
+
+<http://ro2share.org/contributors/64063-6AC-061>
+        a          foaf:Person ;
+        foaf:name  "Sean Mooney" .
+
+<http://ro2share.org/contributors/640B2-1DC-DB6>
+        a          foaf:Person ;
+        foaf:name  "John Willbanks" .
+
+<http://ro2share.org/contributors/640B8-D38-23E>
+        a          foaf:Person ;
+        foaf:name  "Chris Mungall" .
+
+<http://ro2share.org/contributors/64097-46F-B96>
+        a          foaf:Person ;
+        foaf:name  "Raja Mazumder" .
+
+<http://ro2share.org/contributors/641D8-C8E-572>
+        a          foaf:Person ;
+        foaf:name  "Sean Mcdonald" .
+
+<http://ro2share.org/contributors/64100-D0D-B0B>
+        a          foaf:Person ;
+        foaf:name  "Chris Chute" .
+
+<http://ro2share.org/contributors/6418A-15D-81D>
+        a          foaf:Person ;
+        foaf:name  "Timothy Clark" .
+
+<http://ro2share.org/contributors/64014-B7B-30C>
+        a          foaf:Person ;
+        foaf:name  "Carole Goble" .
+
+<http://ro2share.org/contributors/64007-4C4-9FC>
+        a          foaf:Person ;
+        foaf:name  "Matthew H. Brush" .
+
+<http://ro2share.org/contributors/64148-CE3-3D8>
+        a          foaf:Person ;
+        foaf:name  "Mark Lawler" .
+
+<http://ro2share.org/contributors/640DF-445-463>
+        a          foaf:Person ;
+        foaf:name  "Julie Mcmurry" .
+
+<http://ro2share.org/contributors/640E5-FA0-8EB>
+        a          foaf:Person ;
+        foaf:name  "Richard L. Zhu" .
+
+<http://ro2share.org/contributors/64000-969-574>
+        a          foaf:Person ;
+        foaf:name  "Peter D'Eustachio" .
+
+<http://ro2share.org/contributors/64213-5AD-52F>
+        a          foaf:Person ;
+        foaf:name  "Victor Jongeneel" .
+
+<http://ro2share.org/contributors/640AB-681-92E>
+        a          foaf:Person ;
+        foaf:name  "Amye Kenall" .
+
+<http://ro2share.org/contributors/64050-1E5-A59>
+        a          foaf:Person ;
+        foaf:name  "Stian Soiland-Reyes" .
+
+<http://ro2share.org/contributors/6401C-06A-FCF>
+        a          foaf:Person ;
+        foaf:name  "Natalie J Stanford" .
+
+<http://ro2share.org/contributors/64070-3E1-257>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/64070-3E1-257/roles/641BF-8FF-BB6> ;
+        foaf:name            "Susanna-Assunta Sansone" .
+
+<http://ro2share.org/contributors/64070-3E1-257/roles/641BF-8FF-BB6>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46032-C2D-548> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/641BF-8FF-BB6> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/64085-70A-AC7>
+        a          foaf:Organization ;
+        foaf:name  "Babraham Institute" .
+
+<http://ro2share.org/contributors/6405F-5B2-C74>
+        a          foaf:Person ;
+        foaf:name  "Anthony Burdett" .
+
+<http://ro2share.org/contributors/64066-10E-0FC>
+        a          foaf:Person ;
+        foaf:name  "Navtej Juty" .
+
+<http://ro2share.org/affiliations/64226-C09-53A>
+        a          foaf:Organization ;
+        foaf:name  "Babraham Institute, CB22 3AT" .
+
+<http://ro2share.org/contributors/640E1-EA7-4FE>
+        a          foaf:Person ;
+        foaf:name  "Donal Fellows" .
+
+<http://ro2share.org/affiliations/64090-EDB-60B>
+        a          foaf:Organization ;
+        foaf:name  "LBNL;" .
+
+<http://ro2share.org/contributors/64047-D89-0B4/roles/64085-70A-AC7>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46032-C2D-548> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64085-70A-AC7> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/work/46032-C2D-548>
+        a                    fabio:Work ;
+        dcterms:creator      <http://orcid.org/0000-0003-4727-9435> , <http://ro2share.org/contributors/64090-940-B88> , <http://ro2share.org/contributors/64050-1E5-A59> , <http://ro2share.org/contributors/6401C-06A-FCF> , <http://ro2share.org/contributors/64070-3E1-257> , <http://ro2share.org/contributors/6405F-5B2-C74> , <http://ro2share.org/contributors/64066-10E-0FC> , <http://ro2share.org/contributors/640E1-EA7-4FE> , <http://ro2share.org/contributors/64191-A04-435> , <http://ro2share.org/contributors/641D2-E7E-87A> , <http://ro2share.org/contributors/6415B-E58-C7E> , <http://ro2share.org/contributors/64190-337-58B> , <http://ro2share.org/contributors/64071-AAE-101> , <http://ro2share.org/contributors/6421A-E54-147> , <http://ro2share.org/contributors/641E6-FBF-29B> , <http://ro2share.org/contributors/64049-68A-5D1> , <http://ro2share.org/contributors/640A0-A2D-0B9> , <http://ro2share.org/contributors/64035-3A7-4C2> , <http://ro2share.org/contributors/641ED-BEB-A9A> , <http://ro2share.org/contributors/641AA-D1B-0E9> , <http://ro2share.org/contributors/64010-A81-F1F> , <http://ro2share.org/contributors/64054-F59-25F> , <http://ro2share.org/contributors/64056-D40-EE1> , <http://ro2share.org/contributors/64047-D89-0B4> , <http://ro2share.org/contributors/64164-60D-747> , <http://ro2share.org/contributors/64122-F6A-9EE> , <http://ro2share.org/contributors/640D9-635-76B> , <http://ro2share.org/contributors/641D0-496-303> , <http://ro2share.org/contributors/641F4-746-F22> , <http://ro2share.org/contributors/64001-6B4-D04> , <http://ro2share.org/contributors/64249-DD3-0FF> , <http://ro2share.org/contributors/6418D-F05-EA8> , <http://ro2share.org/contributors/6407F-424-DB0> , <http://ro2share.org/contributors/64169-50F-58E> , <http://ro2share.org/contributors/64093-376-7A9> , <http://ro2share.org/contributors/64206-C42-3AF> , <http://ro2share.org/contributors/6409E-FD6-B4D> , <http://ro2share.org/contributors/64184-34D-B25> , <http://ro2share.org/contributors/641E7-090-612> , <http://ro2share.org/contributors/64178-851-EEB> , <http://ro2share.org/contributors/640CD-C95-766> , <http://ro2share.org/contributors/64238-87D-CEB> , <http://ro2share.org/contributors/64135-81C-DD0> , <http://ro2share.org/contributors/640E8-A02-986> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <http://dx.doi.org/10.1101/117812> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64112-F69-619> ;
+        dcterms:title        "Identifiers for the 21st century: How to design, provision, and reuse persistent identifiers to maximize utility and impact of life science data" ;
+        bibo:doi             "http://dx.doi.org/10.1101/117812" ;
+        owl:sameAs           <https://share.osf.io/creativework/46032-C2D-548> .
+
+<http://ro2share.org/contributors/64191-A04-435>
+        a          foaf:Person ;
+        foaf:name  "James Robert Malone" .
+
+<http://ro2share.org/contributors/641D2-E7E-87A>
+        a          foaf:Person ;
+        foaf:name  "Jo Mcentyre" .
+
+<http://ro2share.org/contributors/6415B-E58-C7E>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/6415B-E58-C7E/roles/64020-818-87A> , <http://ro2share.org/contributors/6415B-E58-C7E/roles/64201-BDE-4D4> , <http://ro2share.org/contributors/6415B-E58-C7E/roles/64165-1F8-BF4> ;
+        foaf:name            "Jeffrey Grethe" , "Jeffrey S. Grethe" .
+
+<http://ro2share.org/contributors/64190-337-58B>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/64190-337-58B/roles/64050-E78-B2D> ;
+        foaf:name            "Henning Hermjakob" .
+
+<http://ro2share.org/contributors/64071-AAE-101>
+        a          foaf:Person ;
+        foaf:name  "Camille Laibe" .
+
+<http://ro2share.org/contributors/6421A-E54-147>
+        a          foaf:Person ;
+        foaf:name  "Chris Morris" .
+
+<http://ro2share.org/contributors/641E6-FBF-29B>
+        a          foaf:Person ;
+        foaf:name  "Niklas Blomberg" .
+
+<http://ro2share.org/contributors/64049-68A-5D1>
+        a          foaf:Person ;
+        foaf:name  "Sarala Wimalaratne" .
+
+<http://ro2share.org/contributors/640A0-A2D-0B9>
+        a          foaf:Person ;
+        foaf:name  "Melanie Courtot" .
+
+<http://ro2share.org/contributors/64035-3A7-4C2>
+        a          foaf:Person ;
+        foaf:name  "Carole Goble" .
+
+<http://ro2share.org/contributors/641ED-BEB-A9A>
+        a          foaf:Person ;
+        foaf:name  "Rafael Jimenez" .
+
+<http://ro2share.org/contributors/641AA-D1B-0E9>
+        a          foaf:Person ;
+        foaf:name  "Nicole Washington" .
+
+<http://ro2share.org/contributors/64010-A81-F1F>
+        a          foaf:Person ;
+        foaf:name  "Nathalie Conte" .
+
+<http://ro2share.org/contributors/64054-F59-25F>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/64054-F59-25F/roles/64197-C3C-4FE> ;
+        foaf:name            "Philippe Rocca-Serra" .
+
+<http://ro2share.org/contributors/64056-D40-EE1>
+        a          foaf:Person ;
+        foaf:name  "Murat Sariyar" .
+
+<http://ro2share.org/contributors/64047-D89-0B4>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/64047-D89-0B4/roles/64085-70A-AC7> , <http://ro2share.org/contributors/64047-D89-0B4/roles/64226-C09-53A> ;
+        foaf:name            "Nicolas Le Novere" .
+
+<http://ro2share.org/contributors/64164-60D-747>
+        a          foaf:Person ;
+        foaf:name  "Simon Jupp" .
+
+<http://ro2share.org/contributors/64122-F6A-9EE>
+        a          foaf:Person ;
+        foaf:name  "Wolfgang Mueller" .
+
+<http://ro2share.org/contributors/640D9-635-76B>
+        a          foaf:Person ;
+        foaf:name  "Helen Parkinson" .
+
+<http://ro2share.org/contributors/641D0-496-303>
+        a          foaf:Person ;
+        foaf:name  "Neil Swainston" .
+
+<http://ro2share.org/contributors/641F4-746-F22>
+        a          foaf:Person ;
+        foaf:name  "Jon Ison" .
+
+<http://ro2share.org/contributors/64001-6B4-D04>
+        a          foaf:Person ;
+        foaf:name  "Alan Williams" .
+
+<http://ro2share.org/contributors/64249-DD3-0FF>
+        a          foaf:Person ;
+        foaf:name  "Janna Hastings" .
+
+<http://ro2share.org/contributors/6418D-F05-EA8>
+        a          foaf:Person ;
+        foaf:name  "Katy Wolstencroft" .
+
+<http://ro2share.org/contributors/6407F-424-DB0>
+        a          foaf:Person ;
+        foaf:name  "Julie Mcmurry" .
+
+<http://ro2share.org/contributors/64169-50F-58E>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/64169-50F-58E/roles/64197-C3C-4FE> , <http://ro2share.org/contributors/64169-50F-58E/roles/641C0-789-C1D> ;
+        foaf:name            "Alejandra Gonzalez-Beltran" .
+
+<http://ro2share.org/contributors/64093-376-7A9>
+        a          foaf:Person ;
+        foaf:name  "Philipp Gormanns" .
+
+<http://ro2share.org/publishers/64112-F69-619>
+        a          foaf:Organization ;
+        foaf:name  "Cold Spring Harbor Laboratory Press" .
+
+<http://ro2share.org/contributors/64206-C42-3AF>
+        a          foaf:Person ;
+        foaf:name  "Lilly Winfree" .
+
+<http://ro2share.org/contributors/6409E-FD6-B4D>
+        a          foaf:Person ;
+        foaf:name  "Tom Conlin" .
+
+<http://ro2share.org/contributors/64184-34D-B25>
+        a          foaf:Person ;
+        foaf:name  "Juha Muilu" .
+
+<http://ro2share.org/contributors/641E7-090-612>
+        a          foaf:Person ;
+        foaf:name  "John Kunze" .
+
+<http://ro2share.org/contributors/64178-851-EEB>
+        a          foaf:Person ;
+        foaf:name  "Maria-Jesus Martin" .
+
+<http://ro2share.org/contributors/640CD-C95-766>
+        a          foaf:Person ;
+        foaf:name  "Jean-Karim Heriche" .
+
+<http://ro2share.org/contributors/64238-87D-CEB>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/64238-87D-CEB/roles/64090-EDB-60B> ;
+        foaf:name            "Christopher Mungall" .
+
+<http://ro2share.org/contributors/64135-81C-DD0>
+        a          foaf:Person ;
+        foaf:name  "Jacky Snoep" .
+
+<http://ro2share.org/contributors/640E8-A02-986>
+        a          foaf:Person ;
+        foaf:name  "John Deck" .
+
+<http://ro2share.org/contributors/64047-D89-0B4/roles/64226-C09-53A>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46032-C2D-548> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64226-C09-53A> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/64238-87D-CEB/roles/64090-EDB-60B>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46032-C2D-548> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64090-EDB-60B> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/641BF-8FF-BB6>
+        a          foaf:Organization ;
+        foaf:name  "Oxford e-Research Centre, University of Oxford, 7 Keble Road" .
+
+<http://ro2share.org/contributors/64190-337-58B/roles/64050-E78-B2D>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/46032-C2D-548> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64050-E78-B2D> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/64050-E78-B2D>
+        a          foaf:Organization ;
+        foaf:name  "European Bioinformatics Institute (EMBL-EBI);" .
+
+<http://ro2share.org/contributors/64026-FFD-BD8>
+        a          foaf:Person ;
+        foaf:name  "Ijsbrand Jan Aalbersberg" .
+
+<http://ro2share.org/contributors/640A7-BDB-B57>
+        a          foaf:Person ;
+        foaf:name  "Richard Finkers" .
+
+<http://ro2share.org/contributors/641F0-C48-995>
+        a          foaf:Person ;
+        foaf:name  "Johan Van Der Lei" .
+
+<http://ro2share.org/affiliations/64211-673-184>
+        a          foaf:Organization ;
+        foaf:name  "Micelio.be" .
+
+<http://ro2share.org/contributors/6412F-314-F5E>
+        a          foaf:Person ;
+        foaf:name  "Tobias Kuhn" .
+
+<http://ro2share.org/affiliations/6424C-C2C-A04>
+        a          foaf:Organization ;
+        foaf:name  "Neurosciences" .
+
+<http://ro2share.org/contributors/64155-2FD-7F6>
+        a          foaf:Person ;
+        foaf:name  "Peter A.C ’T Hoen" .
+
+<http://ro2share.org/affiliations/64022-CEB-32C>
+        a          foaf:Organization ;
+        foaf:name  "Micelio" .
+
+<http://ro2share.org/contributors/64146-F53-F0C>
+        a          foaf:Person ;
+        foaf:name  "Myles Axton" .
+
+<http://ro2share.org/contributors/64184-9A1-13B>
+        a          foaf:Person ;
+        foaf:name  "Rob Hooft" .
+
+<http://ro2share.org/contributors/640B5-F85-441>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/640B5-F85-441/roles/64211-673-184> , <http://ro2share.org/contributors/640B5-F85-441/roles/64022-CEB-32C> , <http://ro2share.org/contributors/640B5-F85-441/roles/64138-8F5-25C> ;
+        foaf:name            "Chunlei Wu" .
+
+<http://ro2share.org/contributors/640B5-F85-441/roles/64211-673-184>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64211-673-184> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/640B5-F85-441/roles/64022-CEB-32C>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64022-CEB-32C> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/640B5-F85-441/roles/64138-8F5-25C>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64138-8F5-25C> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/64011-DC8-50F>
+        a          foaf:Person ;
+        foaf:name  "Barend Mons" .
+
+<http://ro2share.org/contributors/641D2-DAD-503/roles/640EB-3AA-942>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/640EB-3AA-942> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/640EB-3AA-942>
+        a          foaf:Organization ;
+        foaf:name  "Massachusetts General Hospital" .
+
+<http://ro2share.org/work/4622A-875-D9C>
+        a                    fabio:Article ;
+        dc:subject           "sdata" , "text" , "comment" , "publication characteristics" , "pmc-open" , "research data" , "hdl_1_4454686" , "journal article" ;
+        dcterms:creator      <http://orcid.org/0000-0003-4727-9435> , <http://ro2share.org/contributors/6415B-E58-C7E> , <http://ro2share.org/contributors/641E6-FBF-29B> , <http://ro2share.org/contributors/64035-3A7-4C2> , <http://ro2share.org/contributors/64054-F59-25F> , <http://ro2share.org/contributors/6418D-F05-EA8> , <http://ro2share.org/contributors/64169-50F-58E> , <http://ro2share.org/contributors/64026-FFD-BD8> , <http://ro2share.org/contributors/640A7-BDB-B57> , <http://ro2share.org/contributors/641F0-C48-995> , <http://ro2share.org/contributors/6412F-314-F5E> , <http://ro2share.org/contributors/64155-2FD-7F6> , <http://ro2share.org/contributors/64146-F53-F0C> , <http://ro2share.org/contributors/64184-9A1-13B> , <http://ro2share.org/contributors/640B5-F85-441> , <http://ro2share.org/contributors/64011-DC8-50F> , <http://ro2share.org/contributors/640A2-D96-FDA> , <http://ro2share.org/contributors/64073-E18-022> , <http://ro2share.org/contributors/64143-526-CF6> , <http://ro2share.org/contributors/64204-E5A-72D> , <http://ro2share.org/contributors/64037-0BD-DCD> , <http://ro2share.org/contributors/641D1-096-BF8> , <http://ro2share.org/contributors/64138-F9E-658> , <http://ro2share.org/contributors/640AA-5E5-43C> , <http://ro2share.org/contributors/641BC-191-E86> , <http://ro2share.org/contributors/6419B-5BC-7B8> , <http://ro2share.org/contributors/6402E-F70-9C7> , <http://ro2share.org/contributors/6411A-9DE-839> , <http://ro2share.org/contributors/64241-48F-FF5> , <http://ro2share.org/contributors/641ED-B1A-723> , <http://ro2share.org/contributors/6412C-1E6-CEC> , <http://ro2share.org/contributors/6401F-BA3-7AC> , <http://ro2share.org/contributors/64061-01D-BF1> , <http://ro2share.org/contributors/64241-BB4-982> , <http://ro2share.org/contributors/6417D-721-326> , <http://ro2share.org/contributors/64132-443-1D0> , <http://ro2share.org/contributors/640AF-B4E-946> , <http://ro2share.org/contributors/64004-E36-58C> , <http://ro2share.org/contributors/6406F-CC6-47F> , <http://ro2share.org/contributors/641BC-E84-E60> , <http://ro2share.org/contributors/64189-7E5-CB8> , <http://ro2share.org/contributors/64049-5B9-25A> , <http://ro2share.org/contributors/641FD-60C-2CB> , <http://ro2share.org/contributors/64012-DEB-E40> , <http://ro2share.org/contributors/640FF-C71-619> , <http://ro2share.org/contributors/64056-C6F-B6A> , <http://ro2share.org/contributors/64067-454-6EC> , <http://ro2share.org/contributors/64083-1E5-23D> , <http://ro2share.org/contributors/64027-CF0-BB2> , <http://ro2share.org/contributors/64017-C30-9BD> , <http://ro2share.org/contributors/640C0-50D-ADF> , <http://ro2share.org/contributors/64026-6FE-C34> , <http://ro2share.org/contributors/640A5-7A0-8BF> , <http://ro2share.org/contributors/64106-EF1-42E> , <http://ro2share.org/contributors/64211-81E-063> , <http://ro2share.org/contributors/64160-C9D-7FB> , <http://ro2share.org/contributors/641EA-811-E9A> , <http://ro2share.org/contributors/641F6-AB0-E43> , <http://ro2share.org/contributors/640AC-2FB-D47> , <http://ro2share.org/contributors/64219-790-E52> , <http://ro2share.org/contributors/64030-562-945> , <http://ro2share.org/contributors/64202-450-E48> , <http://ro2share.org/contributors/6407A-973-4AA> , <http://ro2share.org/contributors/640DD-29C-855> , <http://ro2share.org/contributors/640E5-628-D86> , <http://ro2share.org/contributors/64082-8E6-299> , <http://ro2share.org/contributors/64228-439-6E0> , <http://ro2share.org/contributors/6410B-611-61E> , <http://ro2share.org/contributors/6411F-823-3B6> , <http://ro2share.org/contributors/64226-722-DD5> , <http://ro2share.org/contributors/64148-36B-873> , <http://ro2share.org/contributors/641DB-D43-C23> , <http://ro2share.org/contributors/64032-09E-C39> , <http://ro2share.org/contributors/641E0-463-E13> , <http://ro2share.org/contributors/64029-A07-4BD> , <http://ro2share.org/contributors/64061-91C-B95> , <http://ro2share.org/contributors/641B4-D37-A5A> , <http://ro2share.org/contributors/640FA-E2C-A9C> , <http://ro2share.org/contributors/6409C-F2E-B2C> , <http://ro2share.org/contributors/64069-16A-FF7> , <http://ro2share.org/contributors/64089-441-721> , <http://ro2share.org/contributors/64205-57F-0BA> , <http://ro2share.org/contributors/6424F-26B-292> , <http://ro2share.org/contributors/6420B-9B5-BB5> , <http://ro2share.org/contributors/6402E-84C-03A> , <http://ro2share.org/contributors/6420D-6CC-4C0> , <http://ro2share.org/contributors/64195-A84-C61> , <http://ro2share.org/contributors/64038-BFA-0C1> , <http://ro2share.org/contributors/641C3-9E0-2E8> , <http://ro2share.org/contributors/64003-A1E-C25> , <http://ro2share.org/contributors/64112-891-433> , <http://ro2share.org/contributors/6416E-354-10B> , <http://ro2share.org/contributors/641AC-DC4-C6B> , <http://ro2share.org/contributors/64198-BB2-ED3> , <http://ro2share.org/contributors/641D2-DAD-503> , <http://ro2share.org/contributors/6413F-3D5-153> , <http://ro2share.org/contributors/641B5-21D-2BC> , <http://ro2share.org/contributors/64236-214-97D> , <http://ro2share.org/contributors/6400C-F83-992> , <http://ro2share.org/contributors/640F9-116-191> , <http://ro2share.org/contributors/641A0-B25-CC2> , <http://ro2share.org/contributors/64246-2D4-B72> , <http://ro2share.org/contributors/6417F-B5C-5BE> , <http://ro2share.org/contributors/640D9-564-3F4> , <http://ro2share.org/contributors/640B9-9B2-657> , <http://ro2share.org/contributors/641BB-892-EE2> , <http://ro2share.org/contributors/641B5-636-9FE> ;
+        dcterms:description  "There is an urgent need to improve the infrastructure supporting the reuse of scholarly data. A diverse set of stakeholdersârepresenting academia, industry, funding agencies, and scholarly publishersâhave come together to design and jointly endorse a concise and measureable set of principles that we refer to as the FAIR Data Principles. The intent is that these may act as a guideline for those wishing to enhance the reusability of their data holdings. Distinct from peer initiatives that focus on the human scholar, the FAIR Principles put specific emphasis on enhancing the ability of machines to automatically find and use the data, in addition to supporting its reuse by individuals. This Comment is the first formal publication of the FAIR Principles, and includes the rationale behind them, and some exemplar implementations in the community." ;
+        dcterms:identifier   <http://nrs.harvard.edu/urn-3:HUL.InstRepos:26860037> , <oai://pubmedcentral.nih.gov/4792175> , <oai://dash.harvard.edu/1/26860037> , <http://dx.doi.org/10.1038/SDATA.2016.18> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64096-493-C37> , <http://ro2share.org/publishers/641B7-D0B-638> ;
+        dcterms:title        "The FAIR Guiding Principles for scientific data management and stewardship" ;
+        bibo:doi             "http://dx.doi.org/10.1038/SDATA.2016.18" ;
+        owl:sameAs           <https://share.osf.io/creativework/4622A-875-D9C> ;
+        owl:seeAlso          <http://nrs.harvard.edu/urn-3:HUL.InstRepos:26860037> , <oai://pubmedcentral.nih.gov/4792175> , <oai://dash.harvard.edu/1/26860037> .
+
+<http://ro2share.org/contributors/640A2-D96-FDA>
+        a          foaf:Person ;
+        foaf:name  "Jan-Willem Boiten" .
+
+<http://ro2share.org/contributors/64073-E18-022>
+        a          foaf:Person ;
+        foaf:name  "Olivier Dumon" .
+
+<http://ro2share.org/contributors/64143-526-CF6>
+        a          foaf:Person ;
+        foaf:name  "Peter A.C ’T Hoen" .
+
+<http://ro2share.org/contributors/64204-E5A-72D>
+        a          foaf:Person ;
+        foaf:name  "Thierry Sengstag" .
+
+<http://ro2share.org/contributors/64037-0BD-DCD>
+        a          foaf:Person ;
+        foaf:name  "Mark D. Wilkinson" .
+
+<http://ro2share.org/contributors/641D1-096-BF8>
+        a          foaf:Person ;
+        foaf:name  "Abel L. Packer" .
+
+<http://ro2share.org/contributors/64138-F9E-658>
+        a          foaf:Person ;
+        foaf:name  "Johan Van Der Lei" .
+
+<http://ro2share.org/contributors/640AA-5E5-43C>
+        a          foaf:Person ;
+        foaf:name  "Albert Mons" .
+
+<http://ro2share.org/contributors/641BC-191-E86>
+        a          foaf:Person ;
+        foaf:name  "Jildau Bouwman" .
+
+<http://ro2share.org/contributors/6419B-5BC-7B8>
+        a          foaf:Person ;
+        foaf:name  "Jan Velterop" .
+
+<http://ro2share.org/contributors/6402E-F70-9C7>
+        a          foaf:Person ;
+        foaf:name  "Scott J. Lusher" .
+
+<http://ro2share.org/contributors/6411A-9DE-839>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/6411A-9DE-839/roles/64071-18A-D42> ;
+        foaf:name            "Alasdair J G Gray" .
+
+<http://ro2share.org/contributors/6411A-9DE-839/roles/64071-18A-D42>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64071-18A-D42> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/64241-48F-FF5>
+        a          foaf:Person ;
+        foaf:name  "Paul Groth" .
+
+<http://ro2share.org/contributors/6415B-E58-C7E/roles/64020-818-87A>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64020-818-87A> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/64020-818-87A>
+        a          foaf:Organization ;
+        foaf:name  "University of California" .
+
+<http://ro2share.org/contributors/641ED-B1A-723>
+        a          foaf:Person ;
+        foaf:name  "Gabrielle Appleton" .
+
+<http://ro2share.org/contributors/6412C-1E6-CEC>
+        a          foaf:Person ;
+        foaf:name  "Philip E. Bourne" .
+
+<http://ro2share.org/contributors/6415B-E58-C7E/roles/64201-BDE-4D4>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64201-BDE-4D4> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/64201-BDE-4D4>
+        a          foaf:Organization ;
+        foaf:name  "University of California, San Diego" .
+
+<http://ro2share.org/contributors/64054-F59-25F/roles/64197-C3C-4FE>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64197-C3C-4FE> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/6401F-BA3-7AC>
+        a          foaf:Person ;
+        foaf:name  "George Strawn" .
+
+<http://ro2share.org/contributors/64061-01D-BF1>
+        a          foaf:Person ;
+        foaf:name  "Mark Thompson" .
+
+<http://ro2share.org/contributors/64241-BB4-982>
+        a          foaf:Person ;
+        foaf:name  "Joost Kok" .
+
+<http://ro2share.org/contributors/6417D-721-326>
+        a          foaf:Person ;
+        foaf:name  "Olivier Dumon" .
+
+<http://ro2share.org/contributors/64132-443-1D0>
+        a          foaf:Person ;
+        foaf:name  "Erik Van Mulligen" .
+
+<http://ro2share.org/contributors/640AF-B4E-946>
+        a          foaf:Person ;
+        foaf:name  "Morris A. Swertz" .
+
+<http://ro2share.org/contributors/6415B-E58-C7E/roles/64165-1F8-BF4>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64165-1F8-BF4> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/affiliations/64165-1F8-BF4>
+        a          foaf:Organization ;
+        foaf:name  "Center for Research in Biological Systems (CRBS)" .
+
+<http://ro2share.org/contributors/64004-E36-58C>
+        a          foaf:Person ;
+        foaf:name  "Jan Velterop" .
+
+<http://ro2share.org/contributors/6406F-CC6-47F>
+        a          foaf:Person ;
+        foaf:name  "Tobias Kuhn" .
+
+<http://ro2share.org/contributors/641BC-E84-E60>
+        a          foaf:Person ;
+        foaf:name  "Erik Schultes" .
+
+<http://ro2share.org/contributors/64189-7E5-CB8>
+        a          foaf:Person ;
+        foaf:name  "Abel L. Packer" .
+
+<http://ro2share.org/affiliations/64132-08B-F76>
+        a          foaf:Organization ;
+        foaf:name  "Harvard Medical School" .
+
+<http://ro2share.org/contributors/64049-5B9-25A>
+        a          foaf:Person ;
+        foaf:name  "Chris T. Evelo" .
+
+<http://ro2share.org/contributors/641FD-60C-2CB>
+        a          foaf:Person ;
+        foaf:name  "Tim Clark" .
+
+<http://ro2share.org/contributors/64012-DEB-E40>
+        a          foaf:Person ;
+        foaf:name  "Niklas Blomberg" .
+
+<http://ro2share.org/contributors/640FF-C71-619>
+        a          foaf:Person ;
+        foaf:name  "Ruben Kok" .
+
+<http://ro2share.org/contributors/64056-C6F-B6A>
+        a          foaf:Person ;
+        foaf:name  "Ingrid Dillo" .
+
+<http://ro2share.org/affiliations/64197-C3C-4FE>
+        a          foaf:Organization ;
+        foaf:name  "Oxford e-Research Centre, University of Oxford" .
+
+<http://ro2share.org/contributors/64067-454-6EC>
+        a          foaf:Person ;
+        foaf:name  "Peter Wittenburg" .
+
+<http://ro2share.org/affiliations/64138-8F5-25C>
+        a          foaf:Organization ;
+        foaf:name  "The Scripps Research Institute" .
+
+<http://ro2share.org/contributors/64083-1E5-23D>
+        a          foaf:Person ;
+        foaf:name  "Mark D. Wilkinson" .
+
+<http://ro2share.org/contributors/64027-CF0-BB2>
+        a          foaf:Person ;
+        foaf:name  "Rob Hooft" .
+
+<http://ro2share.org/contributors/64017-C30-9BD>
+        a          foaf:Person ;
+        foaf:name  "Chris T. Evelo" .
+
+<http://ro2share.org/contributors/640C0-50D-ADF>
+        a          foaf:Person ;
+        foaf:name  "Myles Axton" .
+
+<http://ro2share.org/contributors/64026-6FE-C34>
+        a          foaf:Person ;
+        foaf:name  "Ted Slater" .
+
+<http://ro2share.org/contributors/64169-50F-58E/roles/64197-C3C-4FE>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64197-C3C-4FE> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/64169-50F-58E/roles/641C0-789-C1D>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/641C0-789-C1D> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/640A5-7A0-8BF>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/640A5-7A0-8BF/roles/64086-71C-D05> ;
+        foaf:name            "Mercè Crosas" .
+
+<http://ro2share.org/contributors/640A5-7A0-8BF/roles/64086-71C-D05>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64086-71C-D05> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/64106-EF1-42E>
+        a          foaf:Person ;
+        foaf:name  "Maryann E. Martone" .
+
+<http://ro2share.org/contributors/64211-81E-063>
+        a          foaf:Person ;
+        foaf:name  "Luiz Bonino Da Silva Santos" .
+
+<http://ro2share.org/contributors/640F9-116-191/roles/6424C-C2C-A04>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/6424C-C2C-A04> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/64160-C9D-7FB>
+        a          foaf:Person ;
+        foaf:name  "Mark Thompson" .
+
+<http://ro2share.org/contributors/641EA-811-E9A>
+        a          foaf:Person ;
+        foaf:name  "Thierry Sengstag" .
+
+<http://ro2share.org/affiliations/64228-1E9-BFE>
+        a          foaf:Organization ;
+        foaf:name  "UC San Diego" .
+
+<http://ro2share.org/contributors/641F6-AB0-E43>
+        a          foaf:Person ;
+        foaf:name  "Mercè Crosas" .
+
+<http://ro2share.org/contributors/640AC-2FB-D47>
+        a          foaf:Person ;
+        foaf:name  "Anthony J. Brookes" .
+
+<http://ro2share.org/contributors/64219-790-E52>
+        a          foaf:Person ;
+        foaf:name  "Bengt Persson" .
+
+<http://ro2share.org/contributors/64030-562-945>
+        a          foaf:Person ;
+        foaf:name  "Ijsbrand Jan Aalbersberg" .
+
+<http://ro2share.org/contributors/64202-450-E48>
+        a          foaf:Person ;
+        foaf:name  "Paul Groth" .
+
+<http://ro2share.org/affiliations/64086-71C-D05>
+        a          foaf:Organization ;
+        foaf:name  "Institute for Quantitative Social Science, Harvard University" .
+
+<http://ro2share.org/contributors/6407A-973-4AA>
+        a          foaf:Person ;
+        foaf:name  "Ingrid Dillo" .
+
+<http://ro2share.org/contributors/640DD-29C-855>
+        a          foaf:Person ;
+        foaf:name  "Mercã¨ Crosas" .
+
+<http://ro2share.org/contributors/640E5-628-D86>
+        a          foaf:Person ;
+        foaf:name  "Philippe Rocca-Serra" .
+
+<http://ro2share.org/contributors/64082-8E6-299>
+        a          foaf:Person ;
+        foaf:name  "Susanna-Assunta Sansone" .
+
+<http://ro2share.org/contributors/64228-439-6E0>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/64228-439-6E0/roles/641EC-6AC-D1B> ;
+        foaf:name            "Philip E. Bourne" .
+
+<http://ro2share.org/contributors/64228-439-6E0/roles/641EC-6AC-D1B>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/641EC-6AC-D1B> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/6410B-611-61E>
+        a          foaf:Person ;
+        foaf:name  "Erik Van Mulligen" .
+
+<http://ro2share.org/publishers/64096-493-C37>
+        a          foaf:Organization ;
+        foaf:name  "Department of Paediatrics, University of Cambridge" .
+
+<http://ro2share.org/contributors/6411F-823-3B6>
+        a          foaf:Person ;
+        foaf:name  "George Strawn" .
+
+<http://ro2share.org/contributors/64226-722-DD5>
+        a          foaf:Person ;
+        foaf:name  "Scott J. Lusher" .
+
+<http://ro2share.org/contributors/640F9-116-191/roles/64020-818-87A>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64020-818-87A> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/641D2-DAD-503/roles/64132-08B-F76>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64132-08B-F76> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/64148-36B-873>
+        a          foaf:Person ;
+        foaf:name  "Albert Mons" .
+
+<http://ro2share.org/contributors/641DB-D43-C23>
+        a          foaf:Person ;
+        foaf:name  "Scott Edmunds" .
+
+<http://ro2share.org/contributors/64032-09E-C39>
+        a          foaf:Person ;
+        foaf:name  "Jun Zhao" .
+
+<http://ro2share.org/contributors/641E0-463-E13>
+        a          foaf:Person ;
+        foaf:name  "Luiz Bonino Da Silva Santos" .
+
+<http://ro2share.org/publishers/641B7-D0B-638>
+        a          foaf:Organization ;
+        foaf:name  "Nature Publishing Group Asia" .
+
+<http://ro2share.org/contributors/64029-A07-4BD>
+        a          foaf:Person ;
+        foaf:name  "Arie Baak" .
+
+<http://ro2share.org/affiliations/6412E-9BF-CFD>
+        a          foaf:Organization ;
+        foaf:name  "Department of Neurosciences" .
+
+<http://ro2share.org/contributors/64061-91C-B95>
+        a          foaf:Person ;
+        foaf:name  "Arie Baak" .
+
+<http://ro2share.org/contributors/641B4-D37-A5A>
+        a          foaf:Person ;
+        foaf:name  "Peter Wittenburg" .
+
+<http://ro2share.org/affiliations/641EC-6AC-D1B>
+        a          foaf:Organization ;
+        foaf:name  "National Institutes of Health" .
+
+<http://ro2share.org/contributors/640FA-E2C-A9C>
+        a          foaf:Person ;
+        foaf:name  "Jildau Bouwman" .
+
+<http://ro2share.org/contributors/6409C-F2E-B2C>
+        a          foaf:Person ;
+        foaf:name  "Marco Roos" .
+
+<http://ro2share.org/contributors/64069-16A-FF7>
+        a          foaf:Person ;
+        foaf:name  "Joost Kok" .
+
+<http://ro2share.org/contributors/64089-441-721>
+        a          foaf:Person ;
+        foaf:name  "Rene Van Schaik" .
+
+<http://ro2share.org/contributors/64205-57F-0BA>
+        a          foaf:Person ;
+        foaf:name  "Marco Roos" .
+
+<http://ro2share.org/contributors/6424F-26B-292>
+        a          foaf:Person ;
+        foaf:name  "Ruben Kok" .
+
+<http://ro2share.org/contributors/6420B-9B5-BB5>
+        a          foaf:Person ;
+        foaf:name  "Susanna-Assunta Sansone" .
+
+<http://ro2share.org/affiliations/64071-18A-D42>
+        a          foaf:Organization ;
+        foaf:name  "Computer Science, Heriot-Watt University" .
+
+<http://ro2share.org/contributors/6402E-84C-03A>
+        a          foaf:Person ;
+        foaf:name  "Jaap Heringa" .
+
+<http://ro2share.org/affiliations/641C0-789-C1D>
+        a          foaf:Organization ;
+        foaf:name  "University of Oxford" .
+
+<http://ro2share.org/contributors/6420D-6CC-4C0>
+        a          foaf:Person ;
+        foaf:name  "Scott C Edmunds" .
+
+<http://ro2share.org/contributors/64195-A84-C61>
+        a          foaf:Person ;
+        foaf:name  "Gabrielle Appleton" .
+
+<http://ro2share.org/contributors/64038-BFA-0C1>
+        a          foaf:Person ;
+        foaf:name  "Katherine Wolstencroft" .
+
+<http://ro2share.org/contributors/640F9-116-191/roles/6412E-9BF-CFD>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/6412E-9BF-CFD> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/641C3-9E0-2E8>
+        a          foaf:Person ;
+        foaf:name  "Rene Van Schaik" .
+
+<http://ro2share.org/contributors/64003-A1E-C25>
+        a          foaf:Person ;
+        foaf:name  "Alasdair J.G. Gray" .
+
+<http://ro2share.org/contributors/64112-891-433>
+        a          foaf:Person ;
+        foaf:name  "Erik Schultes" .
+
+<http://ro2share.org/contributors/6416E-354-10B>
+        a          foaf:Person ;
+        foaf:name  "Ted Slater" .
+
+<http://ro2share.org/contributors/641AC-DC4-C6B>
+        a          foaf:Person ;
+        foaf:name  "Carole Goble" .
+
+<http://ro2share.org/contributors/64198-BB2-ED3>
+        a          foaf:Person ;
+        foaf:name  "Jaap Heringa" .
+
+<http://ro2share.org/contributors/641D2-DAD-503>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/641D2-DAD-503/roles/640EB-3AA-942> , <http://ro2share.org/contributors/641D2-DAD-503/roles/64132-08B-F76> ;
+        foaf:name            "Timothy Clark" .
+
+<http://ro2share.org/contributors/640F9-116-191/roles/64228-1E9-BFE>
+        a                          pro:RoleInTime ;
+        pro:relatesToDocument      <http://ro2share.org/work/4622A-875-D9C> ;
+        pro:relatesToOrganization  <http://ro2share.org/affiliations/64228-1E9-BFE> ;
+        pro:withRole               scoro:affiliate .
+
+<http://ro2share.org/contributors/6413F-3D5-153>
+        a          foaf:Person ;
+        foaf:name  "Jun Zhao" .
+
+<http://ro2share.org/contributors/641B5-21D-2BC>
+        a          foaf:Person ;
+        foaf:name  "Peter A.C ÂT Hoen" .
+
+<http://ro2share.org/contributors/64236-214-97D>
+        a          foaf:Person ;
+        foaf:name  "Jeffrey S. Grethe" .
+
+<http://ro2share.org/contributors/6400C-F83-992>
+        a          foaf:Person ;
+        foaf:name  "Bengt Persson" .
+
+<http://ro2share.org/contributors/640F9-116-191>
+        a                    foaf:Person ;
+        pro:holdsRoleInTime  <http://ro2share.org/contributors/640F9-116-191/roles/6424C-C2C-A04> , <http://ro2share.org/contributors/640F9-116-191/roles/64020-818-87A> , <http://ro2share.org/contributors/640F9-116-191/roles/6412E-9BF-CFD> , <http://ro2share.org/contributors/640F9-116-191/roles/64228-1E9-BFE> ;
+        foaf:name            "Maryann E. Martone" .
+
+<http://ro2share.org/contributors/641A0-B25-CC2>
+        a          foaf:Person ;
+        foaf:name  "Barend Mons" .
+
+<http://ro2share.org/contributors/64246-2D4-B72>
+        a          foaf:Person ;
+        foaf:name  "Morris A. Swertz" .
+
+<http://ro2share.org/contributors/6417F-B5C-5BE>
+        a          foaf:Person ;
+        foaf:name  "Alejandra Gonzalez-Beltran" .
+
+<http://ro2share.org/contributors/640D9-564-3F4>
+        a          foaf:Person ;
+        foaf:name  "Richard Finkers" .
+
+<http://ro2share.org/contributors/640B9-9B2-657>
+        a          foaf:Person ;
+        foaf:name  "Jan-Willem Boiten" .
+
+<http://ro2share.org/contributors/641BB-892-EE2>
+        a          foaf:Person ;
+        foaf:name  "Andra Waagmeester" .
+
+<http://ro2share.org/contributors/641B5-636-9FE>
+        a          foaf:Person ;
+        foaf:name  "Anthony J. Brookes" .
+
+<http://ro2share.org/discos/595486eb8d724c868dd456cfa92133b5>
+        a                <http://rmap-project.org/rmap/terms/DiSCO> ;
+        dc:description   "FAIR DiSCO" ;
+        dcterms:creator  <http://orcid.org/0000-0003-4727-9435> ;
+        ore:aggregates   <http://ro2share.org/work/4622A-875-D9C> .
+
+<http://ro2share.org/contributors/27a56acb90b04feea4f5766f28632252>
+        a           foaf:Person ;
+        owl:sameAs  <http://api.openaire.eu/search/publications?openaireAuthorID=27a56acb90b04feea4f5766f28632252> ;
+        foaf:name   " Alison Callahan" .
+
+<http://ro2share.org/work/od________18::4a78d6d79eabc3bd073e1584452e3ea4>
+        a                    fabio:Work ;
+        dc:subject           "Computer Science - Digital Libraries" ;
+        dcterms:creator      <http://orcid.org/0000-0003-4727-9435> , <http://ro2share.org/contributors/27a56acb90b04feea4f5766f28632252> ;
+        dcterms:description  "With the growth of the Semantic Web as a medium for creating, consuming, mashing up and republishing data, our ability to trace any statement(s) back to their origin is becoming ever more important. Several approaches have now been proposed to associate statements with provenance, with multiple applications in data publication, attribution and argumentation. Here, we describe the ovopub, a modular model for data publication that enables encapsulation, aggregation, integrity checking, and selective-source query answering. We describe the ovopub RDF specification, key design patterns and their application in the publication and referral to data in the life sciences." ;
+        dcterms:title        "Ovopub: Modular data publication with minimal provenance" ;
+        owl:sameAs           <http://arxiv.org/abs/1305.6800> .
+
+<http://orcid.org/0000-0002-1267-0234>
+        a                  foaf:Person , prov:Person ;
+        rdfs:label         "Tobias Kuhn" ;
+        owl:sameAs         <https://share.osf.io/person/64013-A22-E8B> , <http://api.openaire.eu/search/publications?openaireAuthorID=57694cf85e7949b5987f569666531a70> ;
+        foaf:account       <http://orcid.org/0000-0002-1267-0234#orcid-id> ;
+        foaf:familyName    "Kuhn" ;
+        foaf:givenName     "Tobias" ;
+        foaf:name          "Tobias Kuhn" ;
+        foaf:page          <http://www.linkedin.com/in/tkuhn> , <http://www.tkuhn.ch/> , <https://twitter.com/txkuhn> , <https://github.com/tkuhn> , <https://research.vu.nl/portal/en/persons/tobias-kuhn(633aa4d7-16d0-41e6-ba9a-1eb77d9f038a).html> ;
+        foaf:publications  <http://orcid.org/0000-0002-1267-0234#workspace-works> .
+
+<http://orcid.org/0000-0002-1267-0234#workspace-works>
+        a       foaf:Document .
+
+<http://orcid.org/0000-0002-1267-0234#orcid-id>
+        a                            foaf:OnlineAccount ;
+        rdfs:label                   "0000-0002-1267-0234" ;
+        foaf:accountName             "0000-0002-1267-0234" ;
+        foaf:accountServiceHomepage  <http://orcid.org> .
+
+<http://pub.orcid.org/orcid-pub-web/experimental_rdf_v1/0000-0002-1267-0234>
+        a                     foaf:PersonalProfileDocument ;
+        pav:contributedOn     "2013-03-20T08:05:10.213Z"^^xsd:dateTime ;
+        pav:createdBy         <http://orcid.org/0000-0002-1267-0234> ;
+        pav:createdOn         "2013-03-20T08:03:24.797Z"^^xsd:dateTime ;
+        pav:createdWith       <http://orcid.org> ;
+        pav:lastUpdateOn      "2017-06-20T04:40:36.966Z"^^xsd:dateTime ;
+        prov:generatedAtTime  "2017-06-20T04:40:36.966Z"^^xsd:dateTime ;
+        prov:wasAttributedTo  <http://orcid.org/0000-0002-1267-0234> ;
+        foaf:maker            <http://orcid.org/0000-0002-1267-0234> ;
+        foaf:primaryTopic     <http://orcid.org/0000-0002-1267-0234> .
+
+<http://ro2share.org/publishers/64055-07C-EE2>
+        a          foaf:Organization ;
+        foaf:name  "Institute of Electrical and Electronics Engineers (IEEE)" .
+
+<http://ro2share.org/work/46024-4E8-3DE>
+        a                    fabio:Work ;
+        dc:subject           "computer science applications" , "text" , "4" , "cryptography and security" , "computational theory and mathematics" , "computer science" , "5" , "3" , "information systems" , "cs" , "digital libraries" , "h" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1267-0234> , <http://ro2share.org/contributors/64135-AEA-209> , <http://ro2share.org/contributors/641B8-FF8-431> ;
+        dcterms:description  "The current Web has no general mechanisms to make digital artifacts --- such as datasets, code, texts, and images --- verifiable and permanent. For digital artifacts that are supposed to be immutable, there is moreover no commonly accepted method to enforce this immutability. These shortcomings have a serious negative impact on the ability to reproduce the results of processes that rely on Web resources, which in turn heavily impacts areas such as science where reproducibility is important. To solve this problem, we propose trusty URIs containing cryptographic hash values. We show how trusty URIs can be used for the verification of digital artifacts, in a manner that is independent of the serialization format in the case of structured data files such as nanopublications. We demonstrate how the contents of these files become immutable, including dependencies to external digital artifacts and thereby extending the range of verifiability to the entire reference tree. Our approach sticks to the core principles of the Web, namely openness and decentralized architecture, and is fully compatible with existing standards and protocols. Evaluation of our reference implementations shows that these design goals are indeed accomplished by our approach, and that it remains practical even for very large files. Comment: Extended version of conference paper: arXiv:1401.5775" ;
+        dcterms:identifier   <oai://arxiv.org/1507.01697> , <http://arxiv.org/abs/1507.01697> , <http://dx.doi.org/10.1109/TKDE.2015.2419657> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64055-07C-EE2> , <http://ro2share.org/publishers/6404D-601-996> ;
+        dcterms:title        "Making Digital Artifacts on the Web Verifiable and Reliable" ;
+        bibo:doi             "http://dx.doi.org/10.1109/TKDE.2015.2419657" ;
+        owl:sameAs           <https://share.osf.io/creativework/46024-4E8-3DE> ;
+        owl:seeAlso          <oai://arxiv.org/1507.01697> , <http://arxiv.org/abs/1507.01697> .
+
+<http://ro2share.org/publishers/6404D-601-996>
+        a          foaf:Organization ;
+        foaf:name  "Institute of Electrical & Electronics Engineers (IEEE)" .
+
+<http://ro2share.org/contributors/64135-AEA-209>
+        a          foaf:Person ;
+        foaf:name  "Michel Dumontier" .
+
+<http://ro2share.org/contributors/641B8-FF8-431>
+        a          foaf:Person ;
+        foaf:name  "Michel Dumontier" .
+
+<http://ro2share.org/work/4624F-D81-BDE>
+        a                    fabio:Work ;
+        dc:subject           "cdl" , "dataset" , "digsci" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1267-0234> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <oai://oai.datacite.org/7494912> , <http://dx.doi.org/10.6084/M9.FIGSHARE.1419454.V1> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Science Bots: A Model for the Future of Scientific Computation?" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.1419454.V1" ;
+        owl:sameAs           <https://share.osf.io/creativework/4624F-D81-BDE> ;
+        owl:seeAlso          <oai://oai.datacite.org/7494912> .
+
+<http://ro2share.org/discos/87d8fc5a0203498b81f6f4c78c145c68>
+        a                <http://rmap-project.org/rmap/terms/DiSCO> ;
+        dc:description   "test" ;
+        dcterms:creator  <http://orcid.org/0000-0002-1267-0234> ;
+        ore:aggregates   <http://ro2share.org/work/4624F-D81-BDE> .
+
+<http://ro2share.org/work/od________18::dd3a8c4b984a07028cf28211302ec931>
+        a                    fabio:Work ;
+        dc:subject           "Computer Science - Computation and Language" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1267-0234> ;
+        dcterms:description  "What is here called controlled natural language (CNL) has traditionally been given many different names. Especially during the last four decades, a wide variety of such languages have been designed. They are applied to improve communication among humans, to improve translation, or to provide natural and intuitive representations for formal notations. Despite the apparent differences, it seems sensible to put all these languages under the same umbrella. To bring order to the variety of languages, a general classification scheme is presented here. A comprehensive survey of existing English-based CNLs is given, listing and describing 100 languages from 1930 until today. Classification of these languages reveals that they form a single scattered cloud filling the conceptual space between natural languages such as English on the one end and formal languages such as propositional logic on the other. The goal of this article is to provide a common terminology and a common model for CNL, to contribute to the understanding of their general nature, to provide a starting point for researchers interested in the area, and to help developers to make design decisions." ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.1162/COLI_a_00168> ;
+        dcterms:title        "A Survey and Classification of Controlled Natural Languages" ;
+        owl:sameAs           <http://arxiv.org/abs/1507.01701> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.1162/COLI_a_00168> .
+
+<http://pub.orcid.org/orcid-pub-web/experimental_rdf_v1/0000-0002-1304-8447>
+        a                     foaf:PersonalProfileDocument ;
+        pav:contributedOn     "2012-10-19T20:51:59.378Z"^^xsd:dateTime ;
+        pav:createdBy         <http://orcid.org/0000-0002-1304-8447> ;
+        pav:createdOn         "2012-10-19T19:48:40.614Z"^^xsd:dateTime ;
+        pav:createdWith       <http://orcid.org> ;
+        pav:lastUpdateOn      "2017-06-26T22:35:35.278Z"^^xsd:dateTime ;
+        prov:generatedAtTime  "2017-06-26T22:35:35.278Z"^^xsd:dateTime ;
+        prov:wasAttributedTo  <http://orcid.org/0000-0002-1304-8447> ;
+        foaf:maker            <http://orcid.org/0000-0002-1304-8447> ;
+        foaf:primaryTopic     <http://orcid.org/0000-0002-1304-8447> .
+
+<http://orcid.org/0000-0002-1304-8447>
+        a                  foaf:Person , prov:Person ;
+        rdfs:label         "Michael Conlon" ;
+        owl:sameAs         <https://share.osf.io/person/64008-BDF-776> , <https://share.osf.io/person/6423A-694-DAB> , <https://share.osf.io/person/64074-951-CFE> , <https://share.osf.io/person/64121-226-54B> , <https://share.osf.io/person/64112-6D2-D0C> , <https://github.com/mconlon17> , <http://api.openaire.eu/search/publications?openaireAuthorID=0a3b83a16fb74e4f9a4b1f78deb7b918> , <http://api.openaire.eu/search/publications?openaireAuthorID=9cca0c68c3584d058559ac8153ae4e69> , <http://api.openaire.eu/search/publications?openaireAuthorID=957fbe8b711947828a057bd3a0dd838d> , <http://api.openaire.eu/search/publications?openaireAuthorID=06289c524692471da2bc76ad9d6e97b7> , <http://api.openaire.eu/search/publications?openaireAuthorID=f9a4d870ef03421e923547fa14f343f5> , <http://api.openaire.eu/search/publications?openaireAuthorID=84e70252536047d2a834a8c045e6d66f> , <http://api.openaire.eu/search/publications?openaireAuthorID=ca0ff01f9a2e4158bb3f56f9b162fe68> , <http://api.openaire.eu/search/publications?openaireAuthorID=0b276307bbd84e4e87741d04e9d8b586> , <http://api.openaire.eu/search/publications?openaireAuthorID=6da06f5900e242d4a6dc594171d0fabc> , <http://api.openaire.eu/search/publications?openaireAuthorID=00e7e47ed2144b828eda0ebdd2f359b7> ;
+        foaf:account       <http://orcid.org/0000-0002-1304-8447#orcid-id> ;
+        foaf:based_near    [ a                 gn:Feature ;
+                             gn:countryCode    "US" ;
+                             gn:parentCountry  <http://sws.geonames.org/6252001/>
+                           ] ;
+        foaf:familyName    "Conlon" ;
+        foaf:givenName     "Michael" ;
+        foaf:mbox          <mailto:mconlon@ufl.edu> ;
+        foaf:page          <http://vivo.ufl.edu/individual/mconlon> ;
+        foaf:publications  <http://orcid.org/0000-0002-1304-8447#workspace-works> .
+
+<http://orcid.org/0000-0002-1304-8447#orcid-id>
+        a                            foaf:OnlineAccount ;
+        rdfs:label                   "0000-0002-1304-8447" ;
+        foaf:accountName             "0000-0002-1304-8447" ;
+        foaf:accountServiceHomepage  <http://orcid.org> .
+
+<http://orcid.org/0000-0002-1304-8447#workspace-works>
+        a       foaf:Document .
+
+<http://sws.geonames.org/6252001/>
+        rdfs:label      "United States" ;
+        gn:countryCode  "US" ;
+        gn:name         "United States" .
+
+<http://ro2share.org/work/460F1-7C9-031>
+        a                    fabio:Work ;
+        dc:subject           "information systems" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <oai://oai.datacite.org/11221115> , <http://dx.doi.org/10.6084/M9.FIGSHARE.5110837.V1> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Research Networking" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5110837.V1" ;
+        owl:sameAs           <https://share.osf.io/creativework/460F1-7C9-031> ;
+        owl:seeAlso          <oai://oai.datacite.org/11221115> .
+
+<http://ro2share.org/work/4612F-B15-204>
+        a                    fabio:Work ;
+        dc:subject           "information systems" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <oai://oai.datacite.org/11221114> , <http://dx.doi.org/10.6084/M9.FIGSHARE.5110837> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Research Networking" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5110837" ;
+        owl:sameAs           <https://share.osf.io/creativework/4612F-B15-204> ;
+        owl:seeAlso          <oai://oai.datacite.org/11221114> .
+
+<http://ro2share.org/work/4608B-958-2D2>
+        a                    fabio:Work ;
+        dc:subject           "survey results" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <oai://oai.datacite.org/11221161> , <http://dx.doi.org/10.6084/M9.FIGSHARE.5110843.V1> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "VIVO 2010 Closing Session Survey" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5110843.V1" ;
+        owl:sameAs           <https://share.osf.io/creativework/4608B-958-2D2> ;
+        owl:seeAlso          <oai://oai.datacite.org/11221161> .
+
+<http://ro2share.org/work/461E4-4B6-CB8>
+        a                    fabio:Work ;
+        dc:subject           "150201 finance" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <oai://oai.datacite.org/11221155> , <http://dx.doi.org/10.6084/M9.FIGSHARE.5110840> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "CTSA Cost Recovery" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5110840" ;
+        owl:sameAs           <https://share.osf.io/creativework/461E4-4B6-CB8> ;
+        owl:seeAlso          <oai://oai.datacite.org/11221155> .
+
+<http://ro2share.org/work/46039-7E2-2A5>
+        a                    fabio:Work ;
+        dc:subject           "80610 information systems organisation" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <http://dx.doi.org/10.6084/M9.FIGSHARE.5048089> , <oai://oai.datacite.org/11123241> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Some VIVO Things -- a web site" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5048089" ;
+        owl:sameAs           <https://share.osf.io/creativework/46039-7E2-2A5> ;
+        owl:seeAlso          <oai://oai.datacite.org/11123241> .
+
+<http://ro2share.org/work/461D7-1E8-2E6>
+        a                    fabio:Work ;
+        dc:subject           "80610 information systems organisation" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <oai://oai.datacite.org/11123242> , <http://dx.doi.org/10.6084/M9.FIGSHARE.5048089.V1> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Some VIVO Things -- a web site" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5048089.V1" ;
+        owl:sameAs           <https://share.osf.io/creativework/461D7-1E8-2E6> ;
+        owl:seeAlso          <oai://oai.datacite.org/11123242> .
+
+<http://ro2share.org/contributors/64096-AA4-B1C>
+        a          foaf:Person ;
+        foaf:name  "Vivo Collaboration" .
+
+<http://ro2share.org/work/4613B-4B5-209>
+        a                    fabio:Work ;
+        dc:subject           "information systems" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> , <http://ro2share.org/contributors/64096-AA4-B1C> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <http://dx.doi.org/10.6084/M9.FIGSHARE.5110834.V1> , <oai://oai.datacite.org/11221100> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "VIVO: Enabling National Networking of Scientists" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5110834.V1" ;
+        owl:sameAs           <https://share.osf.io/creativework/4613B-4B5-209> ;
+        owl:seeAlso          <oai://oai.datacite.org/11221100> .
+
+<http://ro2share.org/work/46079-F44-B24>
+        a                    fabio:Work ;
+        dc:subject           "80702 health informatics" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <http://dx.doi.org/10.6084/M9.FIGSHARE.5097532> , <oai://oai.datacite.org/11188778> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Creating Biomedical Informatics at the University of Florida" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5097532" ;
+        owl:sameAs           <https://share.osf.io/creativework/46079-F44-B24> ;
+        owl:seeAlso          <oai://oai.datacite.org/11188778> .
+
+<http://ro2share.org/contributors/64086-BBE-F3E>
+        a          foaf:Person ;
+        foaf:name  "Vivo Collaboration" .
+
+<http://ro2share.org/work/4619B-0C9-A84>
+        a                    fabio:Work ;
+        dc:subject           "information systems" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> , <http://ro2share.org/contributors/64086-BBE-F3E> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <http://dx.doi.org/10.6084/M9.FIGSHARE.5110834> , <oai://oai.datacite.org/11221101> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "VIVO: Enabling National Networking of Scientists" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5110834" ;
+        owl:sameAs           <https://share.osf.io/creativework/4619B-0C9-A84> ;
+        owl:seeAlso          <oai://oai.datacite.org/11221101> .
+
+<http://ro2share.org/work/4620F-0D8-DD2>
+        a                    fabio:Work ;
+        dc:subject           "80702 health informatics" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <oai://oai.datacite.org/11188779> , <http://dx.doi.org/10.6084/M9.FIGSHARE.5097532.V1> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Creating Biomedical Informatics at the University of Florida" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5097532.V1" ;
+        owl:sameAs           <https://share.osf.io/creativework/4620F-0D8-DD2> ;
+        owl:seeAlso          <oai://oai.datacite.org/11188779> .
+
+<http://ro2share.org/work/46141-96E-DD3>
+        a                    fabio:Work ;
+        dc:subject           "cdl" , "dataset" , "digsci" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <oai://oai.datacite.org/6831402> , <http://dx.doi.org/10.6084/M9.FIGSHARE.2002020.V2> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "A RoadMap Process for VIVO" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.2002020.V2" ;
+        owl:sameAs           <https://share.osf.io/creativework/46141-96E-DD3> ;
+        owl:seeAlso          <oai://oai.datacite.org/6831402> .
+
+<http://ro2share.org/work/461AB-557-5B7>
+        a                    fabio:Work ;
+        dc:subject           "cdl" , "dataset" , "digsci" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <http://dx.doi.org/10.6084/M9.FIGSHARE.2442313> , <oai://oai.datacite.org/7662486> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Representing Scholars and Scholarship" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.2442313" ;
+        owl:sameAs           <https://share.osf.io/creativework/461AB-557-5B7> ;
+        owl:seeAlso          <oai://oai.datacite.org/7662486> .
+
+<http://ro2share.org/work/461F9-C8E-127>
+        a                    fabio:Work ;
+        dc:subject           "animal science and zoology" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <http://dx.doi.org/10.1002/(SICI)1097-010X(19991001)284:5%3C535::AID-JEZ9%3E3.0.CO;2-Q> ;
+        dcterms:publisher    <http://ro2share.org/publishers/641C9-605-533> ;
+        dcterms:title        "Molecular diversity, localization, and biological actions of elasmobranch tachykinins" ;
+        bibo:doi             "http://dx.doi.org/10.1002/(SICI)1097-010X(19991001)284:5%3C535::AID-JEZ9%3E3.0.CO;2-Q" ;
+        owl:sameAs           <https://share.osf.io/creativework/461F9-C8E-127> .
+
+<http://ro2share.org/publishers/641C9-605-533>
+        a          foaf:Organization ;
+        foaf:name  "International Studies Perspectives 2015. DOI: 10.1111/Insp.12104" .
+
+<http://ro2share.org/work/46147-2D4-539>
+        a                    fabio:Work ;
+        dc:subject           "cdl" , "dataset" , "digsci" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <oai://oai.datacite.org/6668555> , <http://dx.doi.org/10.6084/M9.FIGSHARE.2002020> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "A RoadMap Process for VIVO" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.2002020" ;
+        owl:sameAs           <https://share.osf.io/creativework/46147-2D4-539> ;
+        owl:seeAlso          <oai://oai.datacite.org/6668555> .
+
+<http://ro2share.org/repository/contribution-ontology>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "A repository for representation of a person's role in research processes and outputs" ;
+        dcterms:title        "contribution-ontology" ;
+        ro2share:language    "Web Ontology Language" ;
+        owl:sameAs           <https://github.com/mconlon17/contribution-ontology> .
+
+<http://ro2share.org/repository/mconlon17.github.io>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "mconlon17 github web site" ;
+        dcterms:title        "mconlon17.github.io" ;
+        ro2share:language    "HTML" ;
+        owl:sameAs           <https://github.com/mconlon17/mconlon17.github.io> .
+
+<http://ro2share.org/repository/share-data-inspector>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Inspect SHARE data, returning field density by provider for abstract creative works" ;
+        dcterms:title        "share-data-inspector" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/share-data-inspector> .
+
+<http://ro2share.org/repository/simple-vivo-book>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Gitbook repository for Simple VIVO" ;
+        dcterms:title        "simple-vivo-book" ;
+        ro2share:language    "Vue" ;
+        owl:sameAs           <https://github.com/mconlon17/simple-vivo-book> .
+
+<http://ro2share.org/repository/vivo-1.5-improvement>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Improve the operation of VIVO 1.5 at the University of Florida" ;
+        dcterms:title        "vivo-1.5-improvement" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-1.5-improvement> .
+
+<http://ro2share.org/repository/vivo-1.6-upgrade>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Software for upgrading UF VIVO from 1.5.2 to 1.6.3.  Core ingests and tools upgrades" ;
+        dcterms:title        "vivo-1.6-upgrade" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-1.6-upgrade> .
+
+<http://ro2share.org/repository/vivo-absolute-dates>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Treat dates as first class entities.  Merge duplicates" ;
+        dcterms:title        "vivo-absolute-dates" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-absolute-dates> .
+
+<http://ro2share.org/repository/vivo-add-buildings>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Add university buildings to VIVO" ;
+        dcterms:title        "vivo-add-buildings" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-add-buildings> .
+
+<http://ro2share.org/repository/vivo-add-cities>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Add cities in the United States with population over 100,000 in 2012 to VIVO" ;
+        dcterms:title        "vivo-add-cities" ;
+        ro2share:language    "Vue" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-add-cities> .
+
+<http://ro2share.org/repository/vivo-add-pubmed>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Add papers to VIVO from their PubMed identifiers" ;
+        dcterms:title        "vivo-add-pubmed" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-add-pubmed> .
+
+<http://ro2share.org/repository/vivo-add-sponsors>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Add Sponsors of research to VIVO" ;
+        dcterms:title        "vivo-add-sponsors" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-add-sponsors> .
+
+<http://ro2share.org/repository/vivo-add-studies>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Add Human Subject Studies to VIVO" ;
+        dcterms:title        "vivo-add-studies" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-add-studies> .
+
+<http://ro2share.org/repository/vivo-angular-testbed>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "A testbed for exploring angular.js for mobile app development for VIVO" ;
+        dcterms:title        "vivo-angular-testbed" ;
+        ro2share:language    "None" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-angular-testbed> .
+
+<http://ro2share.org/repository/vivo-biosketch-generator>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Make an NIH biosketch from VIVO" ;
+        dcterms:title        "vivo-biosketch-generator" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-biosketch-generator> .
+
+<http://ro2share.org/repository/vivo-course-ingest>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Course ingest for VIVO" ;
+        dcterms:title        "vivo-course-ingest" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-course-ingest> .
+
+<http://ro2share.org/repository/vivo-course-lib>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Function library for course management in VIVO" ;
+        dcterms:title        "vivo-course-lib" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-course-lib> .
+
+<http://ro2share.org/repository/vivo-ctsi-pilot-report>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Report on pilot awardee publications and funding" ;
+        dcterms:title        "vivo-ctsi-pilot-report" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-ctsi-pilot-report> .
+
+<http://ro2share.org/repository/vivo-data-project>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "VIVO Data Project Tools" ;
+        dcterms:title        "vivo-data-project" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-data-project> .
+
+<http://ro2share.org/repository/vivo-expert-finder>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "An expert finder for VIVO" ;
+        dcterms:title        "vivo-expert-finder" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-expert-finder> .
+
+<http://ro2share.org/repository/vivo-foundation>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Library of domain independent functions for using VIVO data" ;
+        dcterms:title        "vivo-foundation" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-foundation> .
+
+<http://ro2share.org/repository/vivo-grant-ingest>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Manage grant data in VIVO" ;
+        dcterms:title        "vivo-grant-ingest" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-grant-ingest> .
+
+<http://ro2share.org/repository/vivo-grant-lib>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Functions for managing grant data in VIVO" ;
+        dcterms:title        "vivo-grant-lib" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-grant-lib> .
+
+<http://ro2share.org/repository/vivo-link-checker>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "VIVO web link checker" ;
+        dcterms:title        "vivo-link-checker" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-link-checker> .
+
+<http://ro2share.org/repository/vivo-log-reports>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Reports on VIVO activity from the VIVO logs" ;
+        dcterms:title        "vivo-log-reports" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-log-reports> .
+
+<http://ro2share.org/repository/vivo-medinfo>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Update VIVO from data in the UF medinfo directory" ;
+        dcterms:title        "vivo-medinfo" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-medinfo> .
+
+<http://ro2share.org/repository/vivo-merge-uris>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Given pairs of uris to merge in VIVO, generate the RDF needed to merge the uris" ;
+        dcterms:title        "vivo-merge-uris" ;
+        ro2share:language    "Python" ;
+        owl:sameAs           <https://github.com/mconlon17/vivo-merge-uris> .
+
+<http://ro2share.org/work/od______2073::2892f1d358bf2a9d4019a7a59c0ceedb>
+        a                    fabio:Work ;
+        dc:subject           "ontology" , "Information Systems" , "ComputingMethodologies_GENERAL" , "vivo" , "bfo" , "Data_MISCELLANEOUS" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Overview of the use of ontologies in VIVO and issues related to the use of ontologies in VIVO." ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.2442313.v1> ;
+        dcterms:title        "Representing Scholars and Scholarship" ;
+        owl:sameAs           <https://figshare.com/articles/Representing_Scholars_and_Scholarship/2442313> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.2442313.v1> .
+
+<http://ro2share.org/work/od______2073::77f532e8b28f3439e7976ac52b86e0e3>
+        a                    fabio:Work ;
+        dc:subject           "clinical research" , "Clinical Sciences not elsewhere classified" , "translational science" , "ctsa" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Presentation to the Translational and Development Program July 24, 2010." ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.5056813.v1> ;
+        dcterms:title        "Clinical and Translational Science and the UF Clinical and Translational Science Institute (CTSI)" ;
+        owl:sameAs           <https://figshare.com/articles/Clinical_and_Translational_Science_and_the_UF_Clinical_and_Translational_Science_Institute_CTSI_/5056813> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.5056813.v1> .
+
+<http://ro2share.org/work/od______2073::77c4ef3c14c038b06f529e9c607ab3ee>
+        a                    fabio:Work ;
+        dc:subject           "ctsa" , "administration" , "Finance" , "cost recovery" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Invited presentation to the CSTA Administration interest group, Washington DC, October 7, 2010." ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.5110840.v1> ;
+        dcterms:title        "CTSA Cost Recovery" ;
+        owl:sameAs           <https://figshare.com/articles/CTSA_Cost_Recovery/5110840> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.5110840.v1> .
+
+<http://ro2share.org/work/od______2073::24bdf33eaee7bed6a337c117b8b4ac2e>
+        a                    fabio:Work ;
+        dc:subject           "Information Systems" , "vivo" , "openvivo" , "semantic web" , "open science" , "linkeddata" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Presented June 25, 2016 at ALA, Orlando, FL, USA" ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.3458447.v1> ;
+        dcterms:title        "OpenVIVO: a hosted platform for representing scholarly work" ;
+        owl:sameAs           <https://figshare.com/articles/OpenVIVO_a_hosted_platform_for_representing_scholarly_work/3458447> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.3458447.v1> .
+
+<http://ro2share.org/work/od______2073::cbb53a24fb9dc9efe4ecaffec1212ed7>
+        a                    fabio:Work ;
+        dc:subject           "Information Systems" , "vivo" , "semantic web" , "research networking" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Invited presentation to the CTSA Informatics Group, Washington DC, October 5, 2010." ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.5110837.v1> ;
+        dcterms:title        "Research Networking" ;
+        owl:sameAs           <https://figshare.com/articles/Research_Networking/5110837> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.5110837.v1> .
+
+<http://ro2share.org/work/od______2073::4cbd316450c79baf43019575d102d7d9>
+        a                    fabio:Work ;
+        dc:subject           "vivo" , "Survey Results" , "planning" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Closing Session, VIVO 2010 Conference, New York City, NY, August 13, 2010" ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.5110843.v1> ;
+        dcterms:title        "VIVO 2010 Closing Session Survey" ;
+        owl:sameAs           <https://figshare.com/articles/VIVO_2010_Closing_Session_Survey/5110843> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.5110843.v1> .
+
+<http://ro2share.org/work/od______2073::3378e6c93e005c4fa30054336a758dae>
+        a                    fabio:Work ;
+        dc:subject           "Information Systems" , "vivo" , "Open Software" , "Informetrics" , "survey" , "vivo16" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Audience participation results from the 2016 VIVO Conference held in Denver, CO" ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.3703428.v1> ;
+        dcterms:title        "VIVO 2016 Audience Participation" ;
+        owl:sameAs           <https://figshare.com/articles/VIVO_2016_Audience_Participation/3703428> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.3703428.v1> .
+
+<http://ro2share.org/work/od______2073::bf1ef9fd354fe8734e050059c8b60c53>
+        a                    fabio:Work ;
+        dc:subject           "Information Systems" , "vivo" , "vivo16" , "human activities" , "vivo updates" , "education" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Thursday morning opening session, VIVO Conference 2016, Denver, CO" ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.3633993.v1> ;
+        dcterms:title        "VIVO 2016 Opening Session" ;
+        owl:sameAs           <https://figshare.com/articles/VIVO_2016_Opening_Session/3633993> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.3633993.v1> .
+
+<http://ro2share.org/work/od______2073::9c2b4c0b523f24d89b7e9ac7ac721553>
+        a                    fabio:Work ;
+        dc:subject           "translational sciences" , "Metabolic Medicine" , "Medicine" , "high school students" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "Invited talk given June 15, 2015 at the University of Florida for the Center for PreCollegiate Training teacher workshop on translational science." ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.2247082.v1> ;
+        dcterms:title        "Preparing for Translational Science" ;
+        owl:sameAs           <https://figshare.com/articles/Preparing_for_Translational_Science/2247082> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.2247082.v1> .
+
+<http://ro2share.org/work/od______2073::49baabaedb799c89b0b320bba8c83696>
+        a                    fabio:Work ;
+        dc:subject           "ontology" , "vivo" , "Information Engineering and Theory" , "Information Systems Organisation" ;
+        dcterms:creator      <http://orcid.org/0000-0002-1304-8447> ;
+        dcterms:description  "VIVO uses ontologies to represent data about scholars and scholarship.<div><br></div><div>Presented at University of Florida Ontologists meeting, January 25, 2017</div>" ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.4584046.v1> ;
+        dcterms:title        "Use of ontologies in VIVO" ;
+        owl:sameAs           <https://figshare.com/articles/Use_of_ontologies_in_VIVO/4584046> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.6084/m9.figshare.4584046.v1> .
+
+<http://orcid.org/0000-0002-9354-8328>
+        a                  foaf:Person , prov:Person ;
+        rdfs:label         "Karen L. Hanson" ;
+        owl:sameAs         <https://github.com/karenhanson> , <http://api.openaire.eu/search/publications?openaireAuthorID=3408e2074dee42ea9cf4cbe809c5ca00> , <http://api.openaire.eu/search/publications?openaireAuthorID=be2aa563cbd04063bc66cf1986b7c758> ;
+        foaf:account       <http://orcid.org/0000-0002-9354-8328#orcid-id> ;
+        foaf:based_near    [ a                 gn:Feature ;
+                             gn:countryCode    "US" ;
+                             gn:parentCountry  <http://sws.geonames.org/6252001/>
+                           ] ;
+        foaf:familyName    "Hanson" ;
+        foaf:givenName     "Karen" ;
+        foaf:name          "Karen L. Hanson" ;
+        foaf:publications  <http://orcid.org/0000-0002-9354-8328#workspace-works> .
+
+<http://orcid.org/0000-0002-9354-8328#workspace-works>
+        a       foaf:Document .
+
+<http://orcid.org/0000-0002-9354-8328#orcid-id>
+        a                            foaf:OnlineAccount ;
+        rdfs:label                   "0000-0002-9354-8328" ;
+        foaf:accountName             "0000-0002-9354-8328" ;
+        foaf:accountServiceHomepage  <http://orcid.org> .
+
+<http://pub.orcid.org/orcid-pub-web/experimental_rdf_v1/0000-0002-9354-8328>
+        a                     foaf:PersonalProfileDocument ;
+        pav:createdBy         <http://orcid.org/0000-0002-9354-8328> ;
+        pav:createdOn         "2014-11-11T15:00:45.9Z"^^xsd:dateTime ;
+        pav:createdWith       <http://orcid.org> ;
+        pav:lastUpdateOn      "2017-06-27T16:36:53.392Z"^^xsd:dateTime ;
+        prov:generatedAtTime  "2017-06-27T16:36:53.392Z"^^xsd:dateTime ;
+        prov:wasAttributedTo  <http://orcid.org/0000-0002-9354-8328> ;
+        foaf:maker            <http://orcid.org/0000-0002-9354-8328> ;
+        foaf:primaryTopic     <http://orcid.org/0000-0002-9354-8328> .
+
+<http://ro2share.org/repository/nyumed-gsearch-solr-config>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-9354-8328> ;
+        dcterms:description  "None" ;
+        dcterms:title        "nyumed-gsearch-solr-config" ;
+        ro2share:language    "XSLT" ;
+        owl:sameAs           <https://github.com/karenhanson/nyumed-gsearch-solr-config> .
+
+<http://ro2share.org/repository/rmap-loader>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-9354-8328> ;
+        dcterms:description  "The RMap harvest/loader framework is a loosely coupled set of components for extracting source data, transforming it into RMap DiSCOs, and adding or updating these DiSCOs in RMap." ;
+        dcterms:title        "rmap-loader" ;
+        ro2share:language    "XSLT" ;
+        owl:sameAs           <https://github.com/karenhanson/rmap-loader> .
+
+<http://ro2share.org/discos/6244ba642d334907ba95716a436119a2>
+        a                <http://rmap-project.org/rmap/terms/DiSCO> ;
+        dc:description   "A fork of the rmap-loader" ;
+        dcterms:creator  <http://orcid.org/0000-0002-9354-8328> ;
+        ore:aggregates   <http://ro2share.org/repository/rmap-loader> .
+
+<http://ro2share.org/publishers/bed00573fef84f5eafe8722cbba63bcf>
+        a          foaf:Organization ;
+        foaf:name  "American Library Association" .
+
+<http://ro2share.org/publishers/f2ec6a3b300149948dce828d29a90789>
+        a          foaf:Organization ;
+        foaf:name  "American Library Association" .
+
+<http://ro2share.org/contributors/5485bc696c374676adf5146e065b70f1>
+        a           foaf:Person ;
+        owl:sameAs  <http://api.openaire.eu/search/publications?openaireAuthorID=5485bc696c374676adf5146e065b70f1> ;
+        foaf:name   "Emily G. Morton-Owens" .
+
+<http://ro2share.org/publishers/bc6d6b9e04894c6eac5ae857a78828b4>
+        a          foaf:Organization ;
+        foaf:name  "Library Information Technology Association" .
+
+<http://ro2share.org/work/dedup_wf_001::cd6351c727460ee774459c09b8489c43>
+        a                    fabio:Work ;
+        dc:subject           "Bibliography. Library science. Information resources" , "Z" ;
+        dcterms:creator      <http://orcid.org/0000-0002-9354-8328> , <http://ro2share.org/contributors/5485bc696c374676adf5146e065b70f1> ;
+        dcterms:description  "Systems librarians at an academic medical library created a management data dashboard. Charts were designed using best practices for data visualization and dashboard layout, and include metrics on gatecount, website visits, IM reference chats, circulation, and ILL volume and turnaround time. Several charts draw on EZproxy log data that has been analyzed and linked to other databases to reveal use by different academic departments and user roles (such as faculty or student). Most charts are bar charts and include a linear regression trendline. The implementation uses Perl scripts to retrieve data from eight different sources and add it to a MySQL data warehouse, from which PHP/Javascript webpages use Google Chart Tools to create the dashboard charts." ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.6017/ital.v31i3.1919> ;
+        dcterms:publisher    <http://ro2share.org/publishers/bed00573fef84f5eafe8722cbba63bcf> , <http://ro2share.org/publishers/f2ec6a3b300149948dce828d29a90789> , <http://ro2share.org/publishers/bc6d6b9e04894c6eac5ae857a78828b4> ;
+        dcterms:title        "Trends at a Glance: A Management Dashboard of Library Statistics" ;
+        owl:sameAs           <http://ejournals.bc.edu/ojs/index.php/ital/article/view/1919> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.6017/ital.v31i3.1919> .
+
+<http://ro2share.org/discos/727c40da597d459b8785100c62204a25>
+        a                <http://rmap-project.org/rmap/terms/DiSCO> ;
+        dc:description   "Trends at a Glance article DiSCO" ;
+        dcterms:creator  <http://orcid.org/0000-0002-9354-8328> ;
+        ore:aggregates   <http://ro2share.org/work/dedup_wf_001::cd6351c727460ee774459c09b8489c43> .
+
+<http://ro2share.org/publishers/08e550f96f2948dba63876e261e8211b>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/publishers/b4c420ffc9dc4b48a35f0e0363ce41ed>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/publishers/9dbc0b34924442838bb600867e91b43f>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/publishers/b29a2ed8b7034526af997ae334ff1fc0>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/publishers/e3a31ab289024fb3a9ebedf5dace72ad>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/publishers/b13ab04eba224001a3adb1a42b0763a2>
+        a          foaf:Organization ;
+        foaf:name  "Purdue University" .
+
+<http://ro2share.org/publishers/1e5713e21f014237a3002b633066cb6e>
+        a          foaf:Organization ;
+        foaf:name  "Medical Library Association" .
+
+<http://ro2share.org/publishers/a3c96aca396242f2b37ea395adf61b61>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/publishers/692180d83dfc4ccebdf678894cd9ca87>
+        a          foaf:Organization ;
+        foaf:name  "Medical Library Association" .
+
+<http://ro2share.org/publishers/45385c530df04f2486a9e5c1299c0bed>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/publishers/7afd410b84c647e69e6a085ce42ac7c6>
+        a          foaf:Organization ;
+        foaf:name  "eScholarship, University of California" .
+
+<http://ro2share.org/publishers/e14ccb0da9c741d69a98a20b57a80357>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/publishers/94551c4c66ca40e0a88c8155172ccc2b>
+        a          foaf:Organization ;
+        foaf:name  "Medical Library Association" .
+
+<http://ro2share.org/contributors/1f73b15b7c144d3bbbc796855c4cd769>
+        a           foaf:Person ;
+        owl:sameAs  <http://api.openaire.eu/search/publications?openaireAuthorID=1f73b15b7c144d3bbbc796855c4cd769> ;
+        foaf:name   "Neil Rambo" .
+
+<http://ro2share.org/publishers/b7eb231f69694e72a9aedcf83af53f69>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/publishers/cb9e928684934ec8ba939f73adfa1302>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/publishers/dfb935ea39f940a1a8938c3847c57143>
+        a          foaf:Organization ;
+        foaf:name  "eScholarship, University of California" .
+
+<http://ro2share.org/contributors/76d2133ddbc743e5a5156cdb460ae29f>
+        a           foaf:Person ;
+        owl:sameAs  <http://api.openaire.eu/search/publications?openaireAuthorID=76d2133ddbc743e5a5156cdb460ae29f> ;
+        foaf:name   " Mario A. Svirsky" .
+
+<http://ro2share.org/publishers/f7e8786a556a4244821d7173a4d91d92>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/contributors/cf89b6edbec04903b7ec244f8a8c9224>
+        a           foaf:Person ;
+        owl:sameAs  <http://api.openaire.eu/search/publications?openaireAuthorID=cf89b6edbec04903b7ec244f8a8c9224> ;
+        foaf:name   "Theodora A. Bakker" .
+
+<http://ro2share.org/publishers/3d11687a850342f3825089757048b4a0>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/publishers/58d290f973f14573922ab475f2c0c20e>
+        a          foaf:Organization ;
+        foaf:name  "Purdue University" .
+
+<http://ro2share.org/publishers/2b726ff0c1ee4035ae667e2337ad0fb8>
+        a          foaf:Organization ;
+        foaf:name  "Medical Library Association" .
+
+<http://ro2share.org/publishers/c19ba16ceca740b481ffaf7c3112c948>
+        a          foaf:Organization ;
+        foaf:name  "University of Massachusetts Medical School, Lamar Soutter Library" .
+
+<http://ro2share.org/work/doajarticles::937c8cdcfcd5c8a004fd85b0c4128692>
+        a                    fabio:Work ;
+        dc:subject           "Bibliography. Library science. Information resources" , "Z" , "Hearing aids" , "DOAJ:Library and Information Science" , "Otolaryngology" , "Cochlear implants" , "DOAJ:Social Sciences" , "Data management" , "Informationist" ;
+        dcterms:creator      <http://orcid.org/0000-0002-9354-8328> , <http://ro2share.org/contributors/1f73b15b7c144d3bbbc796855c4cd769> , <http://ro2share.org/contributors/76d2133ddbc743e5a5156cdb460ae29f> , <http://ro2share.org/contributors/cf89b6edbec04903b7ec244f8a8c9224> , <http://ro2share.org/contributors/e992e9a374d34c08b61e17bd886ac0e2> ;
+        dcterms:description  "Informationists at NYU Health Sciences Libraries (NYUHSL) successfully applied for a NLM supplement to a translational research grant obtained by PIs in the NYU School of Medicine Department of Otolaryngology titled, “Clinical Management of Cochlear Implant Patients with Contralateral Hearing Aids”. The grant involves development of evidence-based guidelines for post-implant management of patients with bimodal cochlear implants. The PIs are also seeking to acquire new data sets to merge with grant-generated data. In light of the shifting data requirements, and the potential introduction of additional datasets, informationists will evaluate and restructure the data model and data entry tool. Report queries will be refined for the new data model and options for a query tool appropriate for users unfamiliar with query languages will be assessed and implemented. The services offered through this supplement represent the deepest and most detailed data management support offered by NYUHSL to date. The components of the supplement are being analyzed as a pilot of a broader offering of these data management services." ;
+        dcterms:identifier   <file:///home/ubuntu/RO2SHARE/app/tmp/10.7191/jeslib.2013.1030> ;
+        dcterms:publisher    <http://ro2share.org/publishers/08e550f96f2948dba63876e261e8211b> , <http://ro2share.org/publishers/b4c420ffc9dc4b48a35f0e0363ce41ed> , <http://ro2share.org/publishers/9dbc0b34924442838bb600867e91b43f> , <http://ro2share.org/publishers/b29a2ed8b7034526af997ae334ff1fc0> , <http://ro2share.org/publishers/e3a31ab289024fb3a9ebedf5dace72ad> , <http://ro2share.org/publishers/b13ab04eba224001a3adb1a42b0763a2> , <http://ro2share.org/publishers/1e5713e21f014237a3002b633066cb6e> , <http://ro2share.org/publishers/a3c96aca396242f2b37ea395adf61b61> , <http://ro2share.org/publishers/692180d83dfc4ccebdf678894cd9ca87> , <http://ro2share.org/publishers/45385c530df04f2486a9e5c1299c0bed> , <http://ro2share.org/publishers/7afd410b84c647e69e6a085ce42ac7c6> , <http://ro2share.org/publishers/e14ccb0da9c741d69a98a20b57a80357> , <http://ro2share.org/publishers/94551c4c66ca40e0a88c8155172ccc2b> , <http://ro2share.org/publishers/b7eb231f69694e72a9aedcf83af53f69> , <http://ro2share.org/publishers/cb9e928684934ec8ba939f73adfa1302> , <http://ro2share.org/publishers/dfb935ea39f940a1a8938c3847c57143> , <http://ro2share.org/publishers/f7e8786a556a4244821d7173a4d91d92> , <http://ro2share.org/publishers/3d11687a850342f3825089757048b4a0> , <http://ro2share.org/publishers/58d290f973f14573922ab475f2c0c20e> , <http://ro2share.org/publishers/2b726ff0c1ee4035ae667e2337ad0fb8> , <http://ro2share.org/publishers/c19ba16ceca740b481ffaf7c3112c948> ;
+        dcterms:title        "Informationist role: clinical data management in auditory research" ;
+        owl:sameAs           <http://escholarship.umassmed.edu/jeslib/vol2/iss1/7/> ;
+        owl:seeAlso          <file:///home/ubuntu/RO2SHARE/app/tmp/10.7191/jeslib.2013.1030> .
+
+<http://ro2share.org/contributors/e992e9a374d34c08b61e17bd886ac0e2>
+        a           foaf:Person ;
+        owl:sameAs  <http://api.openaire.eu/search/publications?openaireAuthorID=e992e9a374d34c08b61e17bd886ac0e2> ;
+        foaf:name   "Arlene C. Neuman" .
+
+<http://ro2share.org/discos/1b6319e8709c43a9b808c223cc701f9d>
+        a                <http://rmap-project.org/rmap/terms/DiSCO> ;
+        dc:description   "Informationist article" ;
+        dcterms:creator  <http://orcid.org/0000-0002-9354-8328> ;
+        ore:aggregates   <http://ro2share.org/work/doajarticles::937c8cdcfcd5c8a004fd85b0c4128692> .
+
+<http://ro2share.org/contributors/6410D-3D4-66A>
+        a           foaf:Person ;
+        owl:sameAs  <https://share.osf.io/person/6410D-3D4-66A> ;
+        foaf:name   "Florencia Rao" .
+
+<http://ro2share.org/work/4606A-5D5-D35>
+        a                    fabio:Work ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> , <http://ro2share.org/contributors/6410D-3D4-66A> , <http://ro2share.org/contributors/641A3-EDA-C8C> ;
+        dcterms:description  "" ;
+        dcterms:identifier   <http://dx.doi.org/10.1109/SASE-CASE.2016.7574098> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64055-07C-EE2> ;
+        dcterms:title        "ISVV applied over space embedded software" ;
+        bibo:doi             "http://dx.doi.org/10.1109/SASE-CASE.2016.7574098" ;
+        owl:sameAs           <https://share.osf.io/creativework/4606A-5D5-D35> .
+
+<http://ro2share.org/contributors/641A3-EDA-C8C>
+        a           foaf:Person ;
+        owl:sameAs  <https://share.osf.io/person/641A3-EDA-C8C> ;
+        foaf:name   "Paola Pezoimburu" .
+
+<http://ro2share.org/discos/8066f126cda641489c961a8f103bdb80>
+        a                <http://rmap-project.org/rmap/terms/DiSCO> ;
+        dc:description   "New Disco" ;
+        dcterms:creator  <http://orcid.org/0000-0002-7138-3542> ;
+        ore:aggregates   <http://ro2share.org/repository/bioschemas-validator-cli> , <http://ro2share.org/repository/biotea-annotation> , <http://ro2share.org/presentation/75176072> .
+
+<http://ro2share.org/repository/biotea-rdfization>
+        a                    fabio:Repository ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "RDF for metadata and content (optional) in PubMed and PMC NXML articles, compatible with Bio2RDF. " ;
+        dcterms:title        "biotea-rdfization" ;
+        ro2share:language    "Java" ;
+        owl:sameAs           <https://github.com/ficolo/biotea-rdfization> .
+
+<http://orcid.org/0000-0003-1238-2539#workspace-works>
+        a       foaf:Document .
+
+<http://pub.orcid.org/orcid-pub-web/experimental_rdf_v1/0000-0003-1238-2539>
+        a                     foaf:PersonalProfileDocument ;
+        pav:contributedOn     "2013-08-28T18:30:30.367Z"^^xsd:dateTime ;
+        pav:createdBy         <http://orcid.org/0000-0003-1238-2539> ;
+        pav:createdOn         "2013-08-28T18:26:41.098Z"^^xsd:dateTime ;
+        pav:createdWith       <http://orcid.org> ;
+        pav:lastUpdateOn      "2017-09-05T01:27:15.637Z"^^xsd:dateTime ;
+        prov:generatedAtTime  "2017-09-05T01:27:15.637Z"^^xsd:dateTime ;
+        prov:wasAttributedTo  <http://orcid.org/0000-0003-1238-2539> ;
+        foaf:maker            <http://orcid.org/0000-0003-1238-2539> ;
+        foaf:primaryTopic     <http://orcid.org/0000-0003-1238-2539> .
+
+<http://orcid.org/0000-0003-1238-2539>
+        a                  foaf:Person , prov:Person ;
+        rdfs:label         "alexander garcia" ;
+        foaf:account       <http://orcid.org/0000-0003-1238-2539#orcid-id> ;
+        foaf:familyName    "garcia" ;
+        foaf:givenName     "alexander" ;
+        foaf:publications  <http://orcid.org/0000-0003-1238-2539#workspace-works> .
+
+<http://orcid.org/0000-0003-1238-2539#orcid-id>
+        a                            foaf:OnlineAccount ;
+        rdfs:label                   "0000-0003-1238-2539" ;
+        foaf:accountName             "0000-0003-1238-2539" ;
+        foaf:accountServiceHomepage  <http://orcid.org> .
+
+<http://ro2share.org/contributors/64049-281-D5C>
+        a          foaf:Person ;
+        foaf:name  "Federico Lopez" .
+
+<http://ro2share.org/contributors/6423A-694-DAB>
+        a           foaf:Person ;
+        owl:sameAs  <https://share.osf.io/person/6423A-694-DAB> ;
+        foaf:name   "Michael Conlon" .
+
+<http://ro2share.org/work/461FD-A6E-28D>
+        a                    fabio:Work ;
+        dc:subject           "information systems" , "80306 open software" , "poster" , "figshare.ars" , "figshare" , "80705 informetrics" , "image" , "80612 interorganisational information systems and web services" ;
+        dcterms:creator      <http://orcid.org/0000-0003-1238-2539> , <http://ro2share.org/contributors/64049-281-D5C> , <http://ro2share.org/contributors/6423A-694-DAB> ;
+        dcterms:description  "    VIVO is an example of a decentralized system; institutions publish VIVO data just by adhering to a simple data structure in the form of an ontology. Similar to a distributed ledger, VIVO is a decentralized database that is used to maintain a continuously growing list of records. These records aim to include a comprehensive list of scholarly outputs. Although outputs are often described in a single narrative, the published reviewed paper, the research has generated many other outputs, which may or may not be recorded. The Research Object (RO) is a container for the purpose of recording all scholarly outputs associated with a particular research effort. The paper, datasets, software, notes, are bundled in an RO. The published paper is often a small fraction of the content of an RO. VIVO represents works beyond papers, datasets, software and reports. More is needed to represent all items that might appear in an RO. But another clear gap exists in identifying the collection of works, traditional and non-traditional, as research objects that can then represent relationships between the works. The richness in relations across ROs is also unrepresented, time-based relationships, and logical precursors, for example.  We are designing a system based on Blockchain technology to keep the ledger for ROs; from the conception through the life cycle of the RO. Wikipedia describes blockchain as follows:  “By design, blockchains are inherently resistant to modification of the data. Once recorded, the data in any given block cannot be altered retroactively without the alteration of all subsequent blocks and the collusion of the network. Functionally, a blockchain can serve as an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way.The ledger itself can also be programmed to trigger transactions automatically.”  We argue that all the value chain for ROs should be kept in a distributed ledger; in this way the RO is preserved and, modifications and transactions over the RO are kept in the ledger. Researchers are thus able to account for their products in a data-based ecosystem that makes it possible for third parties to develop specialized tools over the ROs, researchers and transactions. The Blockchain also preserves the metadata associated with transactions and modifications of ROs; the data is portable, once on the ledger the researcher and the ROs do not depend on a node for existing. The physical existence of the objects is left to specialized apps, e.g. github, figshare, dspace, dryad etc, using protocols, part of our design, to ensure provenance and traceability, thus asserting the existence of the object. Institutions are suppliers of metadata to the ledgers of their people. VIVO is enhanced as a portal, it becomes an integral tool for researchers to increase the value of the ledger, and provides tools for reaping value from the distributed collection of ledgers. In this way, the value of the commons is safely kept. Others may enhance the value of the commons by mining and contributing to the commons, by certifying elements of the commons, and by providing additional means for making use of the commons. The distributed ledger makes it possible to account for all the value that is currently unaccountable. In this context, the tragedy of the commons is not depletion of resources; it is to generate uncountable additional resources.     " ;
+        dcterms:identifier   <oai://oai.datacite.org/11510486> , <http://dx.doi.org/10.6084/M9.FIGSHARE.5259919.V1> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Thinking of a Blockchain for VIVO" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5259919.V1" ;
+        owl:sameAs           <https://share.osf.io/creativework/461FD-A6E-28D> ;
+        owl:seeAlso          <oai://oai.datacite.org/11510486> .
+
+<http://ro2share.org/contributors/6407D-176-6E1>
+        a          foaf:Person ;
+        foaf:name  "Federico Lopez" .
+
+<http://ro2share.org/work/46225-15F-9DB>
+        a                    fabio:Work ;
+        dc:subject           "information systems" , "80306 open software" , "poster" , "figshare.ars" , "figshare" , "80705 informetrics" , "image" , "80612 interorganisational information systems and web services" ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> , <http://orcid.org/0000-0003-1238-2539> , <http://ro2share.org/contributors/6423A-694-DAB> , <http://ro2share.org/contributors/6407D-176-6E1> , <http://ro2share.org/contributors/64162-7AD-A58> ;
+        dcterms:description  "    VIVO is an example of a decentralized system; institutions publish VIVO data just by adhering to a simple data structure in the form of an ontology. Similar to a distributed ledger, VIVO is a decentralized database that is used to maintain a continuously growing list of records. These records aim to include a comprehensive list of scholarly outputs. Although outputs are often described in a single narrative, the published reviewed paper, the research has generated many other outputs, which may or may not be recorded. The Research Object (RO) is a container for the purpose of recording all scholarly outputs associated with a particular research effort. The paper, datasets, software, notes, are bundled in an RO. The published paper is often a small fraction of the content of an RO. VIVO represents works beyond papers, datasets, software and reports. More is needed to represent all items that might appear in an RO. But another clear gap exists in identifying the collection of works, traditional and non-traditional, as research objects that can then represent relationships between the works. The richness in relations across ROs is also unrepresented, time-based relationships, and logical precursors, for example.  We are designing a system based on Blockchain technology to keep the ledger for ROs; from the conception through the life cycle of the RO. Wikipedia describes blockchain as follows:  “By design, blockchains are inherently resistant to modification of the data. Once recorded, the data in any given block cannot be altered retroactively without the alteration of all subsequent blocks and the collusion of the network. Functionally, a blockchain can serve as an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way.The ledger itself can also be programmed to trigger transactions automatically.”  We argue that all the value chain for ROs should be kept in a distributed ledger; in this way the RO is preserved and, modifications and transactions over the RO are kept in the ledger. Researchers are thus able to account for their products in a data-based ecosystem that makes it possible for third parties to develop specialized tools over the ROs, researchers and transactions. The Blockchain also preserves the metadata associated with transactions and modifications of ROs; the data is portable, once on the ledger the researcher and the ROs do not depend on a node for existing. The physical existence of the objects is left to specialized apps, e.g. github, figshare, dspace, dryad etc, using protocols, part of our design, to ensure provenance and traceability, thus asserting the existence of the object. Institutions are suppliers of metadata to the ledgers of their people. VIVO is enhanced as a portal, it becomes an integral tool for researchers to increase the value of the ledger, and provides tools for reaping value from the distributed collection of ledgers. In this way, the value of the commons is safely kept. Others may enhance the value of the commons by mining and contributing to the commons, by certifying elements of the commons, and by providing additional means for making use of the commons. The distributed ledger makes it possible to account for all the value that is currently unaccountable. In this context, the tragedy of the commons is not depletion of resources; it is to generate uncountable additional resources.     " ;
+        dcterms:identifier   <http://dx.doi.org/10.6084/M9.FIGSHARE.5259919> , <oai://oai.datacite.org/11510485> ;
+        dcterms:publisher    <http://ro2share.org/publishers/64001-3AA-928> ;
+        dcterms:title        "Thinking of a Blockchain for VIVO" ;
+        bibo:doi             "http://dx.doi.org/10.6084/M9.FIGSHARE.5259919" ;
+        owl:sameAs           <https://share.osf.io/creativework/46225-15F-9DB> ;
+        owl:seeAlso          <oai://oai.datacite.org/11510485> .
+
+<http://ro2share.org/contributors/64162-7AD-A58>
+        a           foaf:Person ;
+        owl:sameAs  <https://share.osf.io/person/64162-7AD-A58> ;
+        foaf:name   "Alexander Garcia" .
+
+<http://ro2share.org/presentation/81105598>
+        a                    fabio:Presentation ;
+        dcterms:creator      <http://orcid.org/0000-0002-7138-3542> ;
+        dcterms:description  "Presentacion acerca de RDF" ;
+        dcterms:format       "pdf" ;
+        dcterms:language     "en" ;
+        dcterms:title        "Describiendo recursos en la Web Semantica" ;
+        owl:sameAs           <https://www.slideshare.net/fico1021/describiendo-recursos-en-la-web-semntica> .
